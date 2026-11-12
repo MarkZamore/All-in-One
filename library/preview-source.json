@@ -1,0 +1,29 @@
+{
+  "authorArchiveSha256": "1b7434aec426ec892e487a3d22c9468a5c53a24a3d7bd9bd203de12507135d78",
+  "preview": {
+    "height": 540,
+    "sha256": "cad6d73c47e88e5fde2f68d68a70c0c00d658d670c43dd0dad95e4d08c515ac1",
+    "sizeBytes": 43689,
+    "width": 960
+  },
+  "schemaVersion": 1,
+  "source": {
+    "archivePath": "overrides/resources/bacccc/frames_main/1.png",
+    "height": 1080,
+    "references": [
+      "overrides/config/fancymenu/customization/AllInOne.txt",
+      "overrides/config/fancymenu/animations/bacccc/animation.properties"
+    ],
+    "sha256": "b61a1643d70e5a55d545671b91839b87f86018f09150bcf7bffe0c334c1fc4cf",
+    "sizeBytes": 165099,
+    "width": 1920
+  },
+  "transformation": {
+    "format": "JPEG",
+    "method": "center crop and Lanczos resize",
+    "optimize": true,
+    "pillowVersion": "12.3.0",
+    "quality": 92,
+    "subsampling": 0
+  }
+}
