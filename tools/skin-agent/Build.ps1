@@ -28,7 +28,7 @@ $skinSource = (Get-Content "$common/PortableSkinProfiles.java" -Raw).
     Replace('value.isBlank()', 'value.trim().isEmpty()').
     Replace('Path.of(configuredPath)', 'java.nio.file.Paths.get(configuredPath)')
 [IO.File]::WriteAllText("$work/PortableSkinProfiles.java", $skinSource, $encoding)
-& $javac --release 8 -encoding UTF-8 -d $hooks "$work/PortableSkinProfiles.java" "$common/PortableIdentityReflection.java"
+& $javac --release 8 -encoding UTF-8 -d $hooks "$work/PortableSkinProfiles.java" "$common/PortableIdentityReflection.java" "$PSScriptRoot/LegacyMultiplayerHooks.java"
 if ($LASTEXITCODE) { throw 'Skin hook compilation failed.' }
 & $javac --release 8 -encoding UTF-8 -cp $asm -d $classes "$PSScriptRoot/LegacySkinAgent.java"
 if ($LASTEXITCODE) { throw 'Skin agent compilation failed.' }

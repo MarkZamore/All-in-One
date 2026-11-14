@@ -1,4 +1,4 @@
-"""Build the All in One skin update by reusing unchanged public release assets."""
+"""Update All in One's Java 8 agent and retain every other public payload."""
 
 from datetime import datetime, timezone
 import hashlib
@@ -42,9 +42,9 @@ def git(source, *args):
     return subprocess.check_output(["git", "-C", str(source), *args])
 
 
-def stage(agent, output):
+def stage(agent, output, source_revision=None):
     source = Path(__file__).resolve().parents[2]
-    revision = git(source, "rev-parse", "HEAD").decode().strip()
+    revision = git(source, "rev-parse", "--verify", source_revision or "HEAD").decode().strip()
     timestamp = int(git(source, "show", "-s", "--format=%ct", revision))
     lock = json.loads(git(source, "show", f"{revision}:tools/skin-agent/lock.json"))
     with urlopen(BASE + f"pack-manifest.json?candidate={revision}", timeout=30) as response:
@@ -54,20 +54,28 @@ def stage(agent, output):
         raise ValueError("Unexpected All in One manifest")
     if manifest["revision"] != lock["baseRevision"]:
         raise ValueError("The live base revision changed. Review the update against the new files.")
+    if pin(old_manifest)["sha256"] != lock["baseManifestSha256"]:
+        raise ValueError("The public manifest does not match the known base bytes")
     files = {row["path"]: row for row in manifest["files"]}
     launcher = next(row for row in manifest["assets"] if JVM in row["covers"])
+    previous_agent = next(row for row in manifest["assets"] if AGENT in row["covers"])
+    if previous_agent["kind"] != "zipRoot" or previous_agent["covers"] != [AGENT]:
+        raise ValueError("The current release must ship the agent as one independent asset")
+    with zipfile.ZipFile(io.BytesIO(fetch(previous_agent))) as previous:
+        if previous.namelist() != [AGENT] or {"path": AGENT, **pin(previous.read(AGENT))} != files[AGENT]:
+            raise ValueError("The public agent bytes do not match the public manifest")
     with zipfile.ZipFile(io.BytesIO(fetch(launcher))) as previous:
-        launcher_files = {name: previous.read(name) for name in launcher["covers"]}
+        published_options = previous.read(JVM)
     new_options = git(source, "show", f"{revision}:{JVM}")
     agent_bytes = agent.read_bytes()
     if pin(agent_bytes) != lock["agent"] or pin(new_options) != lock["jvmArguments"]:
         raise ValueError("Local agent or JVM options differ from their publication lock")
-    if AGENT in files or new_options != launcher_files[JVM] + b"-javaagent:lanminecraft/legacy-skins.jar\n":
-        raise ValueError("The candidate must add only the Java 8 agent argument and artifact")
-    launcher_files[JVM] = new_options
-    files[JVM] = {"path": JVM, **pin(new_options)}
+    if new_options != published_options or {"path": JVM, **pin(published_options)} != files[JVM]:
+        raise ValueError("The candidate must retain the deployed JVM arguments")
+    if {"path": AGENT, **pin(agent_bytes)} == files[AGENT]:
+        raise ValueError("The candidate agent is unchanged")
     files[AGENT] = {"path": AGENT, **pin(agent_bytes)}
-    manifest["assets"].remove(launcher)
+    manifest["assets"].remove(previous_agent)
     output.mkdir()
 
     def write_asset(entries, suffix):
@@ -77,7 +85,6 @@ def stage(agent, output):
         (output / name).write_bytes(data)
         manifest["assets"].append({"name": name, "kind": "zipRoot", "covers": sorted(entries), **entry})
 
-    write_asset(launcher_files, "launcher")
     write_asset({AGENT: agent_bytes}, "legacy-skins")
     with zipfile.ZipFile(io.BytesIO(fetch(manifest["library"]))) as previous:
         card = json.loads(previous.read("library.json"))
@@ -104,4 +111,4 @@ def stage(agent, output):
 
 
 if __name__ == "__main__":
-    stage(Path(sys.argv[1]), Path(sys.argv[2]))
+    stage(Path(sys.argv[1]), Path(sys.argv[2]), *sys.argv[3:])

@@ -1,9 +1,15 @@
 {
-  "baseRevision": "389ba4ee615b748135b81a1926847c22e0f3303a",
+  "baseRevision": "072a29a1bbef268384378c476763e0d1c651c71b",
+  "baseManifestSha256": "6e66ed37641e513502691e9ce48ab336034c7b2e2f19502bb45e4a34662b6a81",
   "launcherSource": "cbff8c0458c73aad4f315548ed791986367f75ac",
   "agent": {
-    "sizeBytes": 142508,
-    "sha256": "df7071895ce4b4bbe879afa9171e52ebb10f58c91bb53f44473c52844211e88a"
+    "sizeBytes": 148529,
+    "sha256": "c925785b5098123bfd31576203fd6a5d95b7186f8f7ec8d30b49b077e7c3f45a"
+  },
+  "nativeInputs": {
+    "forgeClientSha256": "72b7e1c7524ec7d1dc62afaa60884ba3e57584d8cea2391ba277c899e295bf26",
+    "simpleRpcSha256": "e7acddebdcd85aa76971f3a15b0dd8c8089b00bba2a23ee69ebdf87d273fcd7a",
+    "steamSha256": "0188f8a9d5c22a13efcdae8b8e353b5144cc02407c935b04c3bee7516ce3d185"
   },
   "jvmArguments": {
     "sizeBytes": 85,
