@@ -1,0 +1,12 @@
+{
+  "baseRevision": "389ba4ee615b748135b81a1926847c22e0f3303a",
+  "launcherSource": "cbff8c0458c73aad4f315548ed791986367f75ac",
+  "agent": {
+    "sizeBytes": 142508,
+    "sha256": "df7071895ce4b4bbe879afa9171e52ebb10f58c91bb53f44473c52844211e88a"
+  },
+  "jvmArguments": {
+    "sizeBytes": 85,
+    "sha256": "6cd629a0a7a59ff89de2df00fb2ff70a24ae5e1bf61af8ae2543ddc0e7b03a18"
+  }
+}
