@@ -20,6 +20,7 @@ public final class LegacySkinAgent implements ClassFileTransformer {
     private static final String SESSION = "com/mojang/authlib/yggdrasil/YggdrasilMinecraftSessionService";
     private static final String SKINS = "minecraft/portable/identity/PortableSkinProfiles";
     private static final String MULTIPLAYER = "minecraft/portable/identity/LegacyMultiplayerHooks";
+    private static final String CLIENT = "net/minecraft/client/Minecraft";
     private static JarFile bootstrap;
 
     public static void premain(String arguments, Instrumentation instrumentation) throws Exception {
@@ -40,6 +41,7 @@ public final class LegacySkinAgent implements ClassFileTransformer {
             if ("me/hypherionmc/simplerpc/Utils".equals(name)) return useConnectedPlayerCount(bytes);
             if ("net/minecraft/client/gui/screen/MainMenuScreen".equals(name))
                 return enableSteamMultiplayerButton(bytes);
+            if (CLIENT.equals(name)) return enableSteamGuestChat(bytes);
         }
         if (!SESSION.equals(name)) return null;
         ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
@@ -82,6 +84,31 @@ public final class LegacySkinAgent implements ClassFileTransformer {
             }
         }, 0);
         return writer.toByteArray();
+    }
+
+    private static byte[] enableSteamGuestChat(byte[] bytes) {
+        ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
+        int[] edits = new int[1];
+        new ClassReader(bytes).accept(new ClassVisitor(Opcodes.ASM9, writer) {
+            @Override
+            public MethodVisitor visitMethod(int access, String method, String descriptor, String signature, String[] exceptions) {
+                MethodVisitor target = super.visitMethod(access, method, descriptor, signature, exceptions);
+                if (!"func_238207_b_".equals(method) || !"(Ljava/lang/String;)V".equals(descriptor)) return target;
+                return new MethodVisitor(Opcodes.ASM9, target) {
+                    @Override
+                    public void visitMethodInsn(int opcode, String owner, String name, String desc, boolean isInterface) {
+                        super.visitMethodInsn(opcode, owner, name, desc, isInterface);
+                        if (opcode != Opcodes.INVOKEVIRTUAL || !CLIENT.equals(owner)
+                                || !"func_238217_s_".equals(name) || !"()Z".equals(desc)) return;
+                        visitVarInsn(Opcodes.ALOAD, 0);
+                        super.visitMethodInsn(Opcodes.INVOKESTATIC, MULTIPLAYER, "allowSteamGuestChat",
+                            "(ZLjava/lang/Object;)Z", false);
+                        edits[0]++;
+                    }
+                };
+            }
+        }, 0);
+        return edits[0] == 1 ? writer.toByteArray() : null;
     }
 
     // A Steam bridge supplies the established play connection and does not
