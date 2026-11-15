@@ -1,0 +1,23 @@
+{
+  "Underground": "Подземелье",
+  "In addition to the oneblock, there's another way to get cave spiders. Will you be able to find it ?": "Пещерные пауки появляются из одного блока. Есть и другой способ их добыть. Сможешь его найти?",
+  "Vanilla or Silent Gear pickaxe.": "Подойдёт обычная кирка или кирка из Silent Gear.",
+  "Any iron level pickaxe": "Любая кирка железного уровня",
+  "Vanilla or Silent Gear shovel.": "Подойдёт обычная лопата или лопата из Silent Gear.",
+  "Any iron level shovel": "Любая лопата железного уровня",
+  "Vanilla or Silent Gear sword.": "Подойдёт обычный меч или меч из Silent Gear.",
+  "Any iron level sword": "Любой меч железного уровня",
+  "An easy way to generate kinetic energy. The Encased Fan is also the main tool for some recipes.": "Простой способ получить кинетическую энергию. Вентилятор в корпусе служит основным инструментом для некоторых рецептов.",
+  "Early ore processing": "Переработка руды на раннем этапе",
+  "Crushed ores can be turned to nuggets using a fan with water": "Чтобы получить самородки, промой дроблёную руду потоком воздуха от вентилятора, пропущенным через воду.",
+  "What could be better than more ore ? Still more ore.": "Что может быть лучше, чем много руды? Ещё больше руды.",
+  "Early ore generation": "Получение руды на раннем этапе",
+  "Generate ores with stone and mana": "Для получения руды нужны камень и мана.",
+  "First Ex Nihilo Generator": "Первый генератор Ex Nihilo",
+  "The Ex Nihilo Generator allows you to generate blocks from a specific one block phase.": "Генератор Ex Nihilo создаёт блоки, доступные на выбранном этапе One Block.",
+  "The Ex Nihilo Generator has no output slot. So you have to extract items in another way": "У генератора Ex Nihilo нет выходного слота, поэтому забирать предметы придётся другим способом.",
+  "Block Catalyst": "Катализатор блока",
+  "The Ex Nihilo Generator needs a Block Catalyst linked to a specific One Block phase to generate items.": "Чтобы получать предметы, установи в генератор Ex Nihilo катализатор блока, привязанный к нужному этапу One Block.",
+  "See JEI.": "Смотри рецепты в JEI.",
+  "Early power generation with Create. Of course, you will need water.": "Простой способ получить энергию с помощью Create. Конечно, понадобится вода."
+}

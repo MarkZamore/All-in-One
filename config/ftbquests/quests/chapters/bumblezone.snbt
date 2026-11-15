@@ -1,0 +1,352 @@
+{
+	id: "0000000000000247"
+	group: ""
+	order_index: 9
+	filename: "bumblezone"
+	title: "{all_in_one_quests.bumblezone.695b850659692f5095bc}"
+	icon: "minecraft:bee_nest"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 0.0d
+			y: 0.0d
+			description: [
+				"{all_in_one_quests.bumblezone.348bde7a88723f2ee860}"
+				"{all_in_one_quests.bumblezone.5fa194f1440aa9f6dbce}"
+			]
+			dependencies: ["00000000000001E1"]
+			hide: true
+			id: "0000000000000248"
+			tasks: [{
+				id: "0000000000000249"
+				type: "dimension"
+				title: "{all_in_one_quests.bumblezone.9ffe482f72367a859298}"
+				icon: "minecraft:bee_nest"
+				dimension: "the_bumblezone:the_bumblezone"
+			}]
+		}
+		{
+			x: -1.0d
+			y: 1.5d
+			dependencies: ["0000000000000248"]
+			id: "000000000000024C"
+			tasks: [{
+				id: "000000000000024D"
+				type: "item"
+				item: "buzzier_bees:crystallized_honey_block"
+				count: 64L
+			}]
+			rewards: [{
+				id: "0000000000000255"
+				type: "item"
+				item: "buzzier_bees:honey_lamp"
+				count: 4
+			}]
+		}
+		{
+			x: 0.0d
+			y: 1.5d
+			dependencies: ["0000000000000248"]
+			id: "000000000000024E"
+			tasks: [{
+				id: "000000000000024F"
+				type: "item"
+				item: "minecraft:honeycomb_block"
+				count: 64L
+			}]
+			rewards: [{
+				id: "0000000000000256"
+				type: "item"
+				item: "buzzier_bees:honey_lamp"
+				count: 4
+			}]
+		}
+		{
+			x: 0.0d
+			y: 2.5d
+			dependencies: ["0000000000000248"]
+			id: "0000000000000250"
+			tasks: [{
+				id: "0000000000000251"
+				type: "item"
+				item: "the_bumblezone:honey_crystal_shards"
+				count: 16L
+			}]
+			rewards: [{
+				id: "0000000000000254"
+				type: "item"
+				item: "the_bumblezone:honey_crystal"
+				count: 16
+			}]
+		}
+		{
+			x: 1.0d
+			y: 1.5d
+			dependencies: ["0000000000000248"]
+			id: "0000000000000252"
+			tasks: [{
+				id: "0000000000000253"
+				type: "item"
+				item: "minecraft:honey_block"
+				count: 64L
+			}]
+			rewards: [{
+				id: "0000000000000257"
+				type: "item"
+				item: "buzzier_bees:honey_lamp"
+				count: 4
+			}]
+		}
+		{
+			title: "{all_in_one_quests.bumblezone.d47d7cb0e4f8fd2be5ee}"
+			x: 5.5d
+			y: 0.0d
+			dependencies: ["000000000000025A"]
+			id: "0000000000000258"
+			tasks: [{
+				id: "0000000000000259"
+				type: "item"
+				item: "productivebees:advanced_oak_beehive"
+			}]
+			rewards: [{
+				id: "000000000000025F"
+				type: "item"
+				item: "minecraft:honeycomb"
+				count: 4
+			}]
+		}
+		{
+			title: "{all_in_one_quests.bumblezone.63b57a42223011afbdb7}"
+			x: 3.0d
+			y: 0.0d
+			dependencies: ["0000000000000248"]
+			id: "000000000000025A"
+			tasks: [{
+				id: "000000000000025B"
+				type: "item"
+				item: "minecraft:beehive"
+			}]
+			rewards: [{
+				id: "000000000000025C"
+				type: "item"
+				item: "minecraft:honeycomb"
+				count: 4
+			}]
+		}
+		{
+			title: "{all_in_one_quests.bumblezone.56ed6e528b8ccd9cbf37}"
+			x: 5.5d
+			y: 1.5d
+			dependencies: ["0000000000000258"]
+			id: "000000000000025D"
+			tasks: [{
+				id: "000000000000025E"
+				type: "item"
+				item: "productivebees:expansion_box_oak"
+			}]
+			rewards: [
+				{
+					id: "0000000000000260"
+					type: "item"
+					item: "productivebees:advanced_oak_beehive"
+				}
+				{
+					id: "0000000000000261"
+					type: "item"
+					item: "productivebees:expansion_box_oak"
+				}
+			]
+		}
+		{
+			title: "{all_in_one_quests.bumblezone.4390fbeb834e11928fc4}"
+			x: 3.0d
+			y: -1.5d
+			dependencies: ["000000000000025A"]
+			id: "0000000000000262"
+			tasks: [{
+				id: "0000000000000263"
+				type: "item"
+				item: {
+					id: "productivebees:bee_cage"
+					Count: 1b
+					tag: { }
+				}
+			}]
+			rewards: [
+				{
+					id: "0000000000000264"
+					type: "item"
+					item: {
+						id: "productivebees:bee_cage"
+						Count: 1b
+						tag: { }
+					}
+					count: 2
+				}
+				{
+					id: "0000000000000265"
+					type: "item"
+					item: "minecraft:honeycomb"
+				}
+			]
+		}
+		{
+			x: -3.0d
+			y: -1.0d
+			dependencies: ["00000000000001E1"]
+			hide: true
+			id: "0000000000003B0D"
+			tasks: [{
+				id: "0000000000003B0E"
+				type: "item"
+				item: "buzzier_bees:bee_bottle"
+			}]
+		}
+		{
+			x: -3.0d
+			y: 0.5d
+			description: ["{all_in_one_quests.bumblezone.f3deefa330e7c984e4da}"]
+			dependencies: ["00000000000001E1"]
+			hide: true
+			id: "0000000000003B0F"
+			tasks: [{
+				id: "0000000000003B10"
+				type: "item"
+				item: "productivebees:centrifuge"
+			}]
+			rewards: [{
+				id: "0000000000003B11"
+				type: "item"
+				item: "minecraft:honeycomb"
+			}]
+		}
+		{
+			title: "{all_in_one_quests.bumblezone.245bce1d94d66efca2f6}"
+			icon: "productivebees:bottler"
+			x: 5.5d
+			y: -1.5d
+			description: [
+				"{all_in_one_quests.bumblezone.7df09199d301bb860615}"
+				""
+				"{all_in_one_quests.bumblezone.cbaad59572b4a8c7cb5c}"
+			]
+			dependencies: ["0000000000000258"]
+			id: "70AC117648BE249D"
+			tasks: [
+				{
+					id: "2C10E796356BB8FE"
+					type: "item"
+					item: "productivebees:bottler"
+				}
+				{
+					id: "20C8F20D451AF277"
+					type: "item"
+					item: "minecraft:piston"
+				}
+				{
+					id: "0D8CA043436DE955"
+					type: "item"
+					item: "minecraft:glass_bottle"
+				}
+			]
+		}
+		{
+			x: 5.5d
+			y: -3.0d
+			description: ["{all_in_one_quests.bumblezone.dbbc878801cc1affefb6}"]
+			dependencies: ["70AC117648BE249D"]
+			id: "1A2CAEF61EBBF83C"
+			tasks: [{
+				id: "400311C5FEBE719F"
+				type: "item"
+				item: "productivebees:gene"
+			}]
+		}
+		{
+			icon: "productivebees:incubator"
+			x: 7.0d
+			y: -3.0d
+			description: ["{all_in_one_quests.bumblezone.ba54ba1814d9f6a9c435}"]
+			dependencies: ["1A2CAEF61EBBF83C"]
+			id: "4DE7DF7F569AA8C8"
+			tasks: [
+				{
+					id: "4920FCF165638354"
+					type: "item"
+					item: "productivebees:incubator"
+				}
+				{
+					id: "166740E602C79231"
+					type: "item"
+					item: "productivebees:honey_treat"
+				}
+			]
+		}
+		{
+			title: "{all_in_one_quests.bumblezone.45ba5cc5594a92c51c10}"
+			x: 8.5d
+			y: -3.0d
+			description: ["{all_in_one_quests.bumblezone.5b1d261de9308b2415cc}"]
+			dependencies: ["4DE7DF7F569AA8C8"]
+			id: "017152BB024A1C16"
+			tasks: [{
+				id: "3B567855D15DCBA2"
+				type: "item"
+				title: "{all_in_one_quests.bumblezone.de2b1b53b2acc36b0191}"
+				icon: {
+					id: "productivebees:spawn_egg_configurable_bee"
+					Count: 1b
+					tag: {
+						EntityTag: {
+							type: "productivebees:iron"
+						}
+					}
+				}
+				item: {
+					id: "itemfilters:and"
+					Count: 1b
+					tag: {
+						items: [
+							{
+								id: "productivebees:spawn_egg_configurable_bee"
+								Count: 1b
+								tag: {
+									EntityTag: {
+										type: "productivebees:iron"
+									}
+								}
+							}
+							{
+								id: "itemfilters:strong_nbt"
+								Count: 1b
+								tag: {
+									value: {
+										EntityTag: {
+											type: "productivebees:iron"
+										}
+									}
+								}
+							}
+						]
+					}
+				}
+			}]
+		}
+		{
+			x: 7.0d
+			y: -1.5d
+			description: [
+				"{all_in_one_quests.bumblezone.261f53e4476651c8e87c}"
+				"{all_in_one_quests.bumblezone.5baeead8a3eaabd24ec0}"
+			]
+			dependencies: ["00000000000001E1"]
+			id: "3922D5A50CD0E9F3"
+			tasks: [{
+				id: "7F47A0E25C1C6FAC"
+				type: "checkmark"
+				title: "{all_in_one_quests.bumblezone.4955dcd439875291c1a1}"
+			}]
+		}
+	]
+}

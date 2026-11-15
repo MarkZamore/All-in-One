@@ -1,0 +1,10 @@
+{
+  "Getting started": "Первые шаги",
+  "You have to create a party (/ftbteams) in order to use ftbquests.": "Чтобы пользоваться FTB Quests, создайте команду через /ftbteams.",
+  "": "",
+  "Don't forget to do quests if you get stuck. The quests book isn't meant to be a complete guide but it can contain some tips. Some mods also have a guide book which can be very helpful !": "Если застряли, загляните в задания. В книге заданий есть подсказки, а за подробностями можно обратиться к руководствам, которые есть у некоторых модов.",
+  "Let's start": "Начнём!",
+  "Dimensions are generated as in a vanilla world in this skyblock. That doesn't mean you are free to get all of their resources! Your time is limited by a timer displayed at the bottom left of the screen.": "В этом скайблоке измерения генерируются как в обычном Minecraft. На сбор ресурсов отведено ограниченное время. Следите за таймером в левом нижнем углу экрана.",
+  "Please note that this timer (and the potion effects it gives) isn't added by any dimension mod. This timer is added by the \"Time is up\" mod.": "Таймер и связанные с ним эффекты зелий добавляет отдельный мод Time is Up.",
+  "Timer in dimensions": "Таймер в измерениях"
+}

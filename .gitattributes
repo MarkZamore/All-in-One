@@ -7,3 +7,5 @@
 /tools/network_logging_policy.py text eol=lf
 /tools/skin-agent/** text eol=lf
 *.json text eol=lf
+/config/ftbquests/quests/chapters/*.snbt -text
+/tools/questbook-localization/*.py text eol=lf

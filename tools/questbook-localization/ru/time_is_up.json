@@ -1,0 +1,15 @@
+{
+  "Time is Up": "Время вышло",
+  "Your exploration is limited in time.": "Время на исследование ограничено.",
+  "You will need tricks to quickly explore each dimension.": "Чтобы быстро исследовать каждое измерение, придётся прибегнуть к хитростям.",
+  "A teleporter anchor can teleport to another one.": "Якорь телепорта позволяет переместиться к другому якорю.",
+  "Use the teleporter linker to connect pairs.": "Соединяйте якоря попарно с помощью телепорта-линкера.",
+  "WARNING : Only one-way connections": "ВНИМАНИЕ! Связь работает только в одну сторону.",
+  "More expensive but better.": "Дороже, но лучше.",
+  "A Return Home Charm can be linked to a teleporter": "Зачарование возврата домой можно привязать к телепорту.",
+  "Multi block teleporter from Portality mod.": "Многоблочный телепорт из мода Portality.",
+  "Need energy.": "Требуется энергия.",
+  "Refill with Ender Pearls": "Пополняйте заряд жемчугом Эндера.",
+  "This block creates a safe area in the dimension.": "Этот блок создаёт безопасную зону в измерении.",
+  "(single use)": "(одноразовый)"
+}

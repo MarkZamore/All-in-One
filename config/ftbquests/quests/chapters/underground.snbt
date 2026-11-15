@@ -1,0 +1,1423 @@
+{
+	id: "0000000000000098"
+	group: ""
+	order_index: 4
+	filename: "underground"
+	title: "{all_in_one_quests.underground.fec36e9cbd1ef0c4b80c}"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: -1.5d
+			y: -1.0d
+			id: "000000000000009C"
+			tasks: [{
+				id: "000000000000009D"
+				type: "custom"
+				title: "{all_in_one_quests.underground.a553bb80ce6bfd94e6e9}"
+				icon: "ars_nouveau:arcane_ore"
+			}]
+			rewards: [{
+				id: "000000000000009E"
+				type: "item"
+				item: "ars_nouveau:arcane_ore"
+			}]
+		}
+		{
+			x: -8.0d
+			y: -1.0d
+			id: "000000000000009F"
+			tasks: [{
+				id: "00000000000000A0"
+				type: "custom"
+				title: "{all_in_one_quests.underground.5aa3d99a686895c6f3e9}"
+				icon: "astralsorcery:aquamarine_sand_ore"
+			}]
+			rewards: [{
+				id: "00000000000000A1"
+				type: "item"
+				item: "astralsorcery:aquamarine_sand_ore"
+			}]
+		}
+		{
+			x: -1.5d
+			y: 1.0d
+			id: "00000000000000A5"
+			tasks: [{
+				id: "00000000000000A6"
+				type: "custom"
+				title: "{all_in_one_quests.underground.6aa97b5a028abed0396d}"
+				icon: "astralsorcery:rock_crystal_ore"
+			}]
+			rewards: [{
+				id: "00000000000000A7"
+				type: "item"
+				item: "astralsorcery:rock_crystal_ore"
+			}]
+		}
+		{
+			x: 0.5d
+			y: 1.0d
+			id: "00000000000000A8"
+			tasks: [{
+				id: "00000000000000A9"
+				type: "custom"
+				title: "{all_in_one_quests.underground.f7f2b587cf0f99bf8a9a}"
+				icon: "astralsorcery:starmetal_ore"
+			}]
+			rewards: [{
+				id: "00000000000000AA"
+				type: "item"
+				item: "astralsorcery:starmetal_ore"
+			}]
+		}
+		{
+			x: -10.0d
+			y: -0.5d
+			id: "00000000000000AB"
+			tasks: [{
+				id: "00000000000000AC"
+				type: "custom"
+				title: "{all_in_one_quests.underground.4ed19b34552d354531c4}"
+				icon: "bigreactors:anglesite_ore"
+			}]
+			rewards: [{
+				id: "00000000000000AD"
+				type: "item"
+				item: "bigreactors:anglesite_ore"
+			}]
+		}
+		{
+			x: 9.0d
+			y: -0.5d
+			id: "00000000000000AE"
+			tasks: [{
+				id: "00000000000000AF"
+				type: "custom"
+				title: "{all_in_one_quests.underground.83b690b65dc5439fb2fd}"
+				icon: "bigreactors:benitoite_ore"
+			}]
+			rewards: [{
+				id: "00000000000000B0"
+				type: "item"
+				item: "bigreactors:benitoite_ore"
+			}]
+		}
+		{
+			x: -2.0d
+			y: 0.0d
+			id: "00000000000000B1"
+			tasks: [{
+				id: "00000000000000B2"
+				type: "custom"
+				title: "{all_in_one_quests.underground.5646e5f9f019c826fff1}"
+				icon: "bigreactors:yellorite_ore"
+			}]
+			rewards: [{
+				id: "00000000000000B3"
+				type: "item"
+				item: "bigreactors:yellorite_ore"
+			}]
+		}
+		{
+			x: 2.5d
+			y: 1.0d
+			id: "00000000000000BA"
+			tasks: [{
+				id: "00000000000000BB"
+				type: "custom"
+				title: "{all_in_one_quests.underground.6e9a2351843aaeb93144}"
+				icon: "create:copper_ore"
+			}]
+			rewards: [{
+				id: "00000000000000BC"
+				type: "item"
+				item: "create:copper_ore"
+			}]
+		}
+		{
+			x: 2.0d
+			y: 0.0d
+			id: "00000000000000BD"
+			tasks: [{
+				id: "00000000000000BE"
+				type: "custom"
+				title: "{all_in_one_quests.underground.6f112adab3fdcc3bbef2}"
+				icon: "create:zinc_ore"
+			}]
+			rewards: [{
+				id: "00000000000000BF"
+				type: "item"
+				item: "create:zinc_ore"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 0.0d
+			id: "00000000000000C0"
+			tasks: [{
+				id: "00000000000000C1"
+				type: "custom"
+				title: "{all_in_one_quests.underground.cba131bc769f25900262}"
+				icon: "minecraft:coal_ore"
+			}]
+			rewards: [{
+				id: "00000000000000C2"
+				type: "item"
+				item: "minecraft:coal_ore"
+			}]
+		}
+		{
+			x: 2.0d
+			y: 2.0d
+			id: "00000000000000C3"
+			tasks: [{
+				id: "00000000000000C4"
+				type: "custom"
+				title: "{all_in_one_quests.underground.d08373450a483dd71f42}"
+				icon: "minecraft:diamond_ore"
+			}]
+			rewards: [{
+				id: "00000000000000C5"
+				type: "item"
+				item: "minecraft:diamond_ore"
+			}]
+		}
+		{
+			x: 1.5d
+			y: -1.0d
+			id: "00000000000000C6"
+			tasks: [{
+				id: "00000000000000C7"
+				type: "custom"
+				title: "{all_in_one_quests.underground.7e566968affa34898297}"
+				icon: "minecraft:emerald_ore"
+			}]
+			rewards: [{
+				id: "00000000000000C8"
+				type: "item"
+				item: "minecraft:emerald_ore"
+			}]
+		}
+		{
+			x: -2.5d
+			y: 1.0d
+			id: "00000000000000C9"
+			tasks: [{
+				id: "00000000000000CA"
+				type: "custom"
+				title: "{all_in_one_quests.underground.f995a303235cadd7d570}"
+				icon: "minecraft:gold_ore"
+			}]
+			rewards: [{
+				id: "00000000000000CB"
+				type: "item"
+				item: "minecraft:gold_ore"
+			}]
+		}
+		{
+			x: 1.5d
+			y: 1.0d
+			id: "00000000000000CC"
+			tasks: [{
+				id: "00000000000000CD"
+				type: "custom"
+				title: "{all_in_one_quests.underground.3753f83e5b31cdfefd08}"
+				icon: "minecraft:iron_ore"
+			}]
+			rewards: [{
+				id: "00000000000000CE"
+				type: "item"
+				item: "minecraft:iron_ore"
+			}]
+		}
+		{
+			x: 1.0d
+			y: 2.0d
+			id: "00000000000000CF"
+			tasks: [{
+				id: "00000000000000D0"
+				type: "custom"
+				title: "{all_in_one_quests.underground.ecae8fd68daf1dd9761d}"
+				icon: "minecraft:lapis_ore"
+			}]
+			rewards: [{
+				id: "00000000000000D1"
+				type: "item"
+				item: "minecraft:lapis_ore"
+			}]
+		}
+		{
+			x: 9.5d
+			y: 1.5d
+			id: "00000000000000D2"
+			tasks: [{
+				id: "00000000000000D3"
+				type: "custom"
+				title: "{all_in_one_quests.underground.fbbe1b3b01eff1b5dc62}"
+				icon: "minecraft:nether_gold_ore"
+			}]
+			rewards: [{
+				id: "00000000000000D4"
+				type: "item"
+				item: "minecraft:nether_gold_ore"
+			}]
+		}
+		{
+			x: 8.5d
+			y: 0.5d
+			id: "00000000000000D5"
+			tasks: [{
+				id: "00000000000000D6"
+				type: "custom"
+				title: "{all_in_one_quests.underground.b173b06746b556e548dc}"
+				icon: "minecraft:nether_quartz_ore"
+			}]
+			rewards: [{
+				id: "00000000000000D7"
+				type: "item"
+				item: "minecraft:nether_quartz_ore"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 2.0d
+			id: "00000000000000D8"
+			tasks: [{
+				id: "00000000000000D9"
+				type: "custom"
+				title: "{all_in_one_quests.underground.f8bc72f6d7fc02a98845}"
+				icon: "minecraft:redstone_ore"
+			}]
+			rewards: [{
+				id: "00000000000000DA"
+				type: "item"
+				item: "minecraft:redstone_ore"
+			}]
+		}
+		{
+			x: -2.0d
+			y: 2.0d
+			id: "00000000000000DB"
+			tasks: [{
+				id: "00000000000000DC"
+				type: "custom"
+				title: "{all_in_one_quests.underground.c82b6822358b71546cfe}"
+				icon: "mysticalagriculture:inferium_ore"
+			}]
+			rewards: [{
+				id: "00000000000000DD"
+				type: "item"
+				item: "mysticalagriculture:inferium_ore"
+			}]
+		}
+		{
+			x: -1.0d
+			y: 2.0d
+			id: "00000000000000DE"
+			tasks: [{
+				id: "00000000000000DF"
+				type: "custom"
+				title: "{all_in_one_quests.underground.c9121a49741c2bdb6450}"
+				icon: "mysticalagriculture:prosperity_ore"
+			}]
+			rewards: [{
+				id: "00000000000000E0"
+				type: "item"
+				item: "mysticalagriculture:prosperity_ore"
+			}]
+		}
+		{
+			x: 8.0d
+			y: 4.0d
+			id: "00000000000000E1"
+			tasks: [{
+				id: "00000000000000E2"
+				type: "custom"
+				title: "{all_in_one_quests.underground.695f18e268f66d3d081d}"
+				icon: "mysticalagriculture:soulium_ore"
+			}]
+			rewards: [{
+				id: "00000000000000E3"
+				type: "item"
+				item: "mysticalagriculture:soulium_ore"
+			}]
+		}
+		{
+			x: -10.5d
+			y: 0.5d
+			id: "00000000000000E4"
+			tasks: [{
+				id: "00000000000000E5"
+				type: "custom"
+				title: "{all_in_one_quests.underground.9be0bc1661fedb0f9ad2}"
+				icon: "quark:biotite_ore"
+			}]
+			rewards: [{
+				id: "00000000000000E6"
+				type: "item"
+				item: "quark:biotite_ore"
+			}]
+		}
+		{
+			x: -9.0d
+			y: -1.0d
+			id: "00000000000000E7"
+			tasks: [{
+				id: "00000000000000E8"
+				type: "custom"
+				title: "{all_in_one_quests.underground.1abdbb4cdbb5e6b12b88}"
+				icon: "silentgear:azure_silver_ore"
+			}]
+			rewards: [{
+				id: "00000000000000E9"
+				type: "item"
+				item: "silentgear:azure_silver_ore"
+			}]
+		}
+		{
+			x: 0.5d
+			y: -1.0d
+			id: "00000000000000EA"
+			tasks: [{
+				id: "00000000000000EB"
+				type: "custom"
+				title: "{all_in_one_quests.underground.21aaa4c3d401f29744e1}"
+				icon: "silentgear:bort_ore"
+			}]
+			rewards: [{
+				id: "00000000000000EC"
+				type: "item"
+				item: "silentgear:bort_ore"
+			}]
+		}
+		{
+			x: 6.0d
+			y: -0.5d
+			id: "00000000000000ED"
+			tasks: [{
+				id: "00000000000000EE"
+				type: "custom"
+				title: "{all_in_one_quests.underground.04802b191b9af35f248c}"
+				icon: "silentgear:crimson_iron_ore"
+			}]
+			rewards: [{
+				id: "00000000000000EF"
+				type: "item"
+				item: "silentgear:crimson_iron_ore"
+			}]
+		}
+		{
+			x: -0.5d
+			y: -1.0d
+			id: "00000000000000F0"
+			tasks: [{
+				id: "00000000000000F1"
+				type: "custom"
+				title: "{all_in_one_quests.underground.64383ef049779895f77b}"
+				icon: "silentgems:agate_ore"
+			}]
+			rewards: [{
+				id: "00000000000000F2"
+				type: "item"
+				item: "silentgems:agate_ore"
+			}]
+		}
+		{
+			x: 5.5d
+			y: 2.5d
+			id: "00000000000000F3"
+			tasks: [{
+				id: "00000000000000F4"
+				type: "custom"
+				title: "{all_in_one_quests.underground.bfedf3c9c866b9b03064}"
+				icon: "silentgems:alexandrite_ore"
+			}]
+			rewards: [{
+				id: "00000000000000F5"
+				type: "item"
+				item: "silentgems:alexandrite_ore"
+			}]
+		}
+		{
+			x: 1.0d
+			y: 0.0d
+			id: "00000000000000F6"
+			tasks: [{
+				id: "00000000000000F7"
+				type: "custom"
+				title: "{all_in_one_quests.underground.280ef0f9cf5ed795fee8}"
+				icon: "silentgems:amber_ore"
+			}]
+			rewards: [{
+				id: "00000000000000F8"
+				type: "item"
+				item: "silentgems:amber_ore"
+			}]
+		}
+		{
+			x: -1.0d
+			y: 0.0d
+			id: "00000000000000F9"
+			tasks: [{
+				id: "00000000000000FA"
+				type: "custom"
+				title: "{all_in_one_quests.underground.fe9e7abf0b57fdb14a55}"
+				icon: "silentgems:amethyst_ore"
+			}]
+			rewards: [{
+				id: "00000000000000FB"
+				type: "item"
+				item: "silentgems:amethyst_ore"
+			}]
+		}
+		{
+			x: 8.5d
+			y: 1.5d
+			id: "00000000000000FC"
+			tasks: [{
+				id: "00000000000000FD"
+				type: "custom"
+				title: "{all_in_one_quests.underground.4805a2acb10a6be314d1}"
+				icon: "silentgems:ametrine_ore"
+			}]
+			rewards: [{
+				id: "00000000000000FE"
+				type: "item"
+				item: "silentgems:ametrine_ore"
+			}]
+		}
+		{
+			x: -10.5d
+			y: 1.5d
+			id: "00000000000000FF"
+			tasks: [{
+				id: "0000000000000100"
+				type: "custom"
+				title: "{all_in_one_quests.underground.c7cadeb674790dc4849b}"
+				icon: "silentgems:ammolite_ore"
+			}]
+			rewards: [{
+				id: "0000000000000101"
+				type: "item"
+				item: "silentgems:ammolite_ore"
+			}]
+		}
+		{
+			x: -9.0d
+			y: 4.0d
+			id: "0000000000000102"
+			tasks: [{
+				id: "0000000000000103"
+				type: "custom"
+				title: "{all_in_one_quests.underground.78854c2ffb4b466e4f87}"
+				icon: "silentgems:apatite_ore"
+			}]
+			rewards: [{
+				id: "0000000000000104"
+				type: "item"
+				item: "silentgems:apatite_ore"
+			}]
+		}
+		{
+			x: -0.5d
+			y: 1.0d
+			id: "0000000000000105"
+			tasks: [{
+				id: "0000000000000106"
+				type: "custom"
+				title: "{all_in_one_quests.underground.18cf500329247d93a14f}"
+				icon: "silentgems:aquamarine_ore"
+			}]
+			rewards: [{
+				id: "0000000000000107"
+				type: "item"
+				item: "silentgems:aquamarine_ore"
+			}]
+		}
+		{
+			x: 6.5d
+			y: 1.5d
+			id: "0000000000000108"
+			tasks: [{
+				id: "0000000000000109"
+				type: "custom"
+				title: "{all_in_one_quests.underground.83b690b65dc5439fb2fd}"
+				icon: "silentgems:benitoite_ore"
+			}]
+			rewards: [{
+				id: "000000000000010A"
+				type: "item"
+				item: "silentgems:benitoite_ore"
+			}]
+		}
+		{
+			x: 9.5d
+			y: 2.5d
+			id: "000000000000010B"
+			tasks: [{
+				id: "000000000000010C"
+				type: "custom"
+				title: "{all_in_one_quests.underground.4c2091300bb94a245acf}"
+				icon: "silentgems:black_diamond_ore"
+			}]
+			rewards: [{
+				id: "000000000000010D"
+				type: "item"
+				item: "silentgems:black_diamond_ore"
+			}]
+		}
+		{
+			x: 7.5d
+			y: 0.0d
+			id: "000000000000010E"
+			tasks: [{
+				id: "000000000000010F"
+				type: "custom"
+				title: "{all_in_one_quests.underground.ee0ab9852ee4c6dcb9ee}"
+				icon: "silentgems:carnelian_ore"
+			}]
+			rewards: [{
+				id: "0000000000000110"
+				type: "item"
+				item: "silentgems:carnelian_ore"
+			}]
+		}
+		{
+			x: -8.0d
+			y: 4.0d
+			id: "0000000000000111"
+			tasks: [{
+				id: "0000000000000112"
+				type: "custom"
+				title: "{all_in_one_quests.underground.5580a27faaeed3a6f03d}"
+				icon: "silentgems:cats_eye_ore"
+			}]
+			rewards: [{
+				id: "0000000000000113"
+				type: "item"
+				item: "silentgems:cats_eye_ore"
+			}]
+		}
+		{
+			x: -2.5d
+			y: -1.0d
+			id: "0000000000000114"
+			tasks: [{
+				id: "0000000000000115"
+				type: "custom"
+				title: "{all_in_one_quests.underground.09448367b7bd055d229e}"
+				icon: "silentgems:chaos_ore"
+			}]
+			rewards: [{
+				id: "0000000000000116"
+				type: "item"
+				item: "silentgems:chaos_ore"
+			}]
+		}
+		{
+			x: -6.5d
+			y: 0.5d
+			id: "0000000000000117"
+			tasks: [{
+				id: "0000000000000118"
+				type: "custom"
+				title: "{all_in_one_quests.underground.70f61bdf1587acf06317}"
+				icon: "silentgems:chrysoprase_ore"
+			}]
+			rewards: [{
+				id: "0000000000000119"
+				type: "item"
+				item: "silentgems:chrysoprase_ore"
+			}]
+		}
+		{
+			x: 5.5d
+			y: 1.5d
+			id: "000000000000011A"
+			tasks: [{
+				id: "000000000000011B"
+				type: "custom"
+				title: "{all_in_one_quests.underground.d65954e1806195891293}"
+				icon: "silentgems:citrine_ore"
+			}]
+			rewards: [{
+				id: "000000000000011C"
+				type: "item"
+				item: "silentgems:citrine_ore"
+			}]
+		}
+		{
+			x: -6.5d
+			y: 1.5d
+			id: "000000000000011D"
+			tasks: [{
+				id: "000000000000011E"
+				type: "custom"
+				title: "{all_in_one_quests.underground.cf1a7b5cf19926efb1b7}"
+				icon: "silentgems:coral_ore"
+			}]
+			rewards: [{
+				id: "000000000000011F"
+				type: "item"
+				item: "silentgems:coral_ore"
+			}]
+		}
+		{
+			x: -7.0d
+			y: -0.5d
+			id: "0000000000000120"
+			tasks: [{
+				id: "0000000000000121"
+				type: "custom"
+				title: "{all_in_one_quests.underground.945765fc111a24097ea0}"
+				icon: "silentgems:ender_ore"
+			}]
+			rewards: [{
+				id: "0000000000000122"
+				type: "item"
+				item: "silentgems:ender_ore"
+			}]
+		}
+		{
+			x: 6.0d
+			y: 3.5d
+			id: "0000000000000123"
+			tasks: [{
+				id: "0000000000000124"
+				type: "custom"
+				title: "{all_in_one_quests.underground.d55b82f2851eef163308}"
+				icon: "silentgems:euclase_ore"
+			}]
+			rewards: [{
+				id: "0000000000000125"
+				type: "item"
+				item: "silentgems:euclase_ore"
+			}]
+		}
+		{
+			x: -10.0d
+			y: 3.5d
+			id: "0000000000000126"
+			tasks: [{
+				id: "0000000000000127"
+				type: "custom"
+				title: "{all_in_one_quests.underground.d58de55d6766a0ffa216}"
+				icon: "silentgems:fluorite_ore"
+			}]
+			rewards: [{
+				id: "0000000000000128"
+				type: "item"
+				item: "silentgems:fluorite_ore"
+			}]
+		}
+		{
+			x: -3.0d
+			y: 0.0d
+			id: "0000000000000129"
+			tasks: [{
+				id: "000000000000012A"
+				type: "custom"
+				title: "{all_in_one_quests.underground.23b118a1577552be1a96}"
+				icon: "silentgems:garnet_ore"
+			}]
+			rewards: [{
+				id: "000000000000012B"
+				type: "item"
+				item: "silentgems:garnet_ore"
+			}]
+		}
+		{
+			x: -3.0d
+			y: 2.0d
+			id: "000000000000012C"
+			tasks: [{
+				id: "000000000000012D"
+				type: "custom"
+				title: "{all_in_one_quests.underground.5b3e184abf410f7360b0}"
+				icon: "silentgems:green_sapphire_ore"
+			}]
+			rewards: [{
+				id: "000000000000012E"
+				type: "item"
+				item: "silentgems:green_sapphire_ore"
+			}]
+		}
+		{
+			x: -3.5d
+			y: 1.0d
+			id: "000000000000012F"
+			tasks: [{
+				id: "0000000000000130"
+				type: "custom"
+				title: "{all_in_one_quests.underground.9f7a424faff69d035d80}"
+				icon: "silentgems:heliodor_ore"
+			}]
+			rewards: [{
+				id: "0000000000000131"
+				type: "item"
+				item: "silentgems:heliodor_ore"
+			}]
+		}
+		{
+			x: 7.0d
+			y: 4.0d
+			id: "0000000000000132"
+			tasks: [{
+				id: "0000000000000133"
+				type: "custom"
+				title: "{all_in_one_quests.underground.47bd7527702013a75295}"
+				icon: "silentgems:iolite_ore"
+			}]
+			rewards: [{
+				id: "0000000000000134"
+				type: "item"
+				item: "silentgems:iolite_ore"
+			}]
+		}
+		{
+			x: -7.0d
+			y: 3.5d
+			id: "0000000000000135"
+			tasks: [{
+				id: "0000000000000136"
+				type: "custom"
+				title: "{all_in_one_quests.underground.e6514eda7a4242c4da33}"
+				icon: "silentgems:jade_ore"
+			}]
+			rewards: [{
+				id: "0000000000000137"
+				type: "item"
+				item: "silentgems:jade_ore"
+			}]
+		}
+		{
+			x: 8.0d
+			y: -1.0d
+			id: "0000000000000138"
+			tasks: [{
+				id: "0000000000000139"
+				type: "custom"
+				title: "{all_in_one_quests.underground.906cc88c03f83abffd2b}"
+				icon: "silentgems:jasper_ore"
+			}]
+			rewards: [{
+				id: "000000000000013A"
+				type: "item"
+				item: "silentgems:jasper_ore"
+			}]
+		}
+		{
+			x: -7.5d
+			y: 1.5d
+			id: "000000000000013B"
+			tasks: [{
+				id: "000000000000013C"
+				type: "custom"
+				title: "{all_in_one_quests.underground.ed45a8aaf0af292137da}"
+				icon: "silentgems:kunzite_ore"
+			}]
+			rewards: [{
+				id: "000000000000013D"
+				type: "item"
+				item: "silentgems:kunzite_ore"
+			}]
+		}
+		{
+			x: -9.5d
+			y: 1.5d
+			id: "000000000000013E"
+			tasks: [{
+				id: "000000000000013F"
+				type: "custom"
+				title: "{all_in_one_quests.underground.6f636e4aa91ced39e240}"
+				icon: "silentgems:kyanite_ore"
+			}]
+			rewards: [{
+				id: "0000000000000140"
+				type: "item"
+				item: "silentgems:kyanite_ore"
+			}]
+		}
+		{
+			x: 9.5d
+			y: 0.5d
+			id: "0000000000000141"
+			tasks: [{
+				id: "0000000000000142"
+				type: "custom"
+				title: "{all_in_one_quests.underground.a8966c4df18f92b7d905}"
+				icon: "silentgems:lepidolite_ore"
+			}]
+			rewards: [{
+				id: "0000000000000143"
+				type: "item"
+				item: "silentgems:lepidolite_ore"
+			}]
+		}
+		{
+			x: 7.0d
+			y: -1.0d
+			id: "0000000000000144"
+			tasks: [{
+				id: "0000000000000145"
+				type: "custom"
+				title: "{all_in_one_quests.underground.0d1b1cee2a8cba47fbb2}"
+				icon: "silentgems:malachite_ore"
+			}]
+			rewards: [{
+				id: "0000000000000146"
+				type: "item"
+				item: "silentgems:malachite_ore"
+			}]
+		}
+		{
+			x: 5.5d
+			y: 0.5d
+			id: "0000000000000147"
+			tasks: [{
+				id: "0000000000000148"
+				type: "custom"
+				title: "{all_in_one_quests.underground.955996d267a043711a04}"
+				icon: "silentgems:moldavite_ore"
+			}]
+			rewards: [{
+				id: "0000000000000149"
+				type: "item"
+				item: "silentgems:moldavite_ore"
+			}]
+		}
+		{
+			x: 9.0d
+			y: 3.5d
+			id: "000000000000014A"
+			tasks: [{
+				id: "000000000000014B"
+				type: "custom"
+				title: "{all_in_one_quests.underground.7f996f1744da4a1d20bb}"
+				icon: "silentgems:moonstone_ore"
+			}]
+			rewards: [{
+				id: "000000000000014C"
+				type: "item"
+				item: "silentgems:moonstone_ore"
+			}]
+		}
+		{
+			x: -2.5d
+			y: 3.0d
+			id: "000000000000014D"
+			tasks: [{
+				id: "000000000000014E"
+				type: "custom"
+				title: "{all_in_one_quests.underground.f3cf1d32b2194d12dccb}"
+				icon: "silentgems:morganite_ore"
+			}]
+			rewards: [{
+				id: "000000000000014F"
+				type: "item"
+				item: "silentgems:morganite_ore"
+			}]
+		}
+		{
+			x: -1.5d
+			y: 3.0d
+			id: "0000000000000150"
+			tasks: [{
+				id: "0000000000000151"
+				type: "custom"
+				title: "{all_in_one_quests.underground.d5704d9428eb7b08f5c7}"
+				icon: "silentgems:multi_ore_classic"
+			}]
+			rewards: [{
+				id: "0000000000000152"
+				type: "item"
+				item: "silentgems:multi_ore_classic"
+			}]
+		}
+		{
+			x: 8.5d
+			y: 2.5d
+			id: "0000000000000153"
+			tasks: [{
+				id: "0000000000000154"
+				type: "custom"
+				title: "{all_in_one_quests.underground.749cab065c708db49cd7}"
+				icon: "silentgems:multi_ore_dark"
+			}]
+			rewards: [{
+				id: "0000000000000155"
+				type: "item"
+				item: "silentgems:multi_ore_dark"
+			}]
+		}
+		{
+			x: -9.5d
+			y: 0.5d
+			id: "0000000000000156"
+			tasks: [{
+				id: "0000000000000157"
+				type: "custom"
+				title: "{all_in_one_quests.underground.f27e1b9dd8e5553b577a}"
+				icon: "silentgems:multi_ore_light"
+			}]
+			rewards: [{
+				id: "0000000000000158"
+				type: "item"
+				item: "silentgems:multi_ore_light"
+			}]
+		}
+		{
+			x: -0.5d
+			y: 3.0d
+			id: "0000000000000159"
+			tasks: [{
+				id: "000000000000015A"
+				type: "custom"
+				title: "{all_in_one_quests.underground.b417fb26d5531afb3cfd}"
+				icon: "silentgems:onyx_ore"
+			}]
+			rewards: [{
+				id: "000000000000015B"
+				type: "item"
+				item: "silentgems:onyx_ore"
+			}]
+		}
+		{
+			x: 0.5d
+			y: 3.0d
+			id: "000000000000015C"
+			tasks: [{
+				id: "000000000000015D"
+				type: "custom"
+				title: "{all_in_one_quests.underground.ccba16314abf044c79a9}"
+				icon: "silentgems:opal_ore"
+			}]
+			rewards: [{
+				id: "000000000000015E"
+				type: "item"
+				item: "silentgems:opal_ore"
+			}]
+		}
+		{
+			x: -9.5d
+			y: 2.5d
+			id: "000000000000015F"
+			tasks: [{
+				id: "0000000000000160"
+				type: "custom"
+				title: "{all_in_one_quests.underground.81e3582b32e193019990}"
+				icon: "silentgems:pearl_ore"
+			}]
+			rewards: [{
+				id: "0000000000000161"
+				type: "item"
+				item: "silentgems:pearl_ore"
+			}]
+		}
+		{
+			x: 1.5d
+			y: 3.0d
+			id: "0000000000000162"
+			tasks: [{
+				id: "0000000000000163"
+				type: "custom"
+				title: "{all_in_one_quests.underground.3be184b84cfd0c53d55a}"
+				icon: "silentgems:peridot_ore"
+			}]
+			rewards: [{
+				id: "0000000000000164"
+				type: "item"
+				item: "silentgems:peridot_ore"
+			}]
+		}
+		{
+			x: -1.5d
+			y: 4.0d
+			id: "0000000000000165"
+			tasks: [{
+				id: "0000000000000166"
+				type: "custom"
+				title: "{all_in_one_quests.underground.bfa1761f93116a0520d0}"
+				icon: "silentgems:phosphophyllite_ore"
+			}]
+			rewards: [{
+				id: "0000000000000167"
+				type: "item"
+				item: "silentgems:phosphophyllite_ore"
+			}]
+		}
+		{
+			x: -8.5d
+			y: 3.0d
+			id: "0000000000000168"
+			tasks: [{
+				id: "0000000000000169"
+				type: "custom"
+				title: "{all_in_one_quests.underground.b70dea58b6c1bb7505f5}"
+				icon: "silentgems:pyrope_ore"
+			}]
+			rewards: [{
+				id: "000000000000016A"
+				type: "item"
+				item: "silentgems:pyrope_ore"
+			}]
+		}
+		{
+			x: -8.5d
+			y: 0.0d
+			id: "000000000000016B"
+			tasks: [{
+				id: "000000000000016C"
+				type: "custom"
+				title: "{all_in_one_quests.underground.428ecc1e011592a3953e}"
+				icon: "silentgems:rose_quartz_ore"
+			}]
+			rewards: [{
+				id: "000000000000016D"
+				type: "item"
+				item: "silentgems:rose_quartz_ore"
+			}]
+		}
+		{
+			x: 0.5d
+			y: -2.0d
+			id: "000000000000016E"
+			tasks: [{
+				id: "000000000000016F"
+				type: "custom"
+				title: "{all_in_one_quests.underground.94212106d5f430e3a58d}"
+				icon: "silentgems:ruby_ore"
+			}]
+			rewards: [{
+				id: "0000000000000170"
+				type: "item"
+				item: "silentgems:ruby_ore"
+			}]
+		}
+		{
+			x: -0.5d
+			y: -2.0d
+			id: "0000000000000171"
+			tasks: [{
+				id: "0000000000000172"
+				type: "custom"
+				title: "{all_in_one_quests.underground.e05636dd819edabc5f75}"
+				icon: "silentgems:sapphire_ore"
+			}]
+			rewards: [{
+				id: "0000000000000173"
+				type: "item"
+				item: "silentgems:sapphire_ore"
+			}]
+		}
+		{
+			x: -1.5d
+			y: -2.0d
+			id: "0000000000000174"
+			tasks: [{
+				id: "0000000000000175"
+				type: "custom"
+				title: "{all_in_one_quests.underground.8463dd491224437c682d}"
+				icon: "silentgems:silver_ore"
+			}]
+			rewards: [{
+				id: "0000000000000176"
+				type: "item"
+				item: "silentgems:silver_ore"
+			}]
+		}
+		{
+			x: -6.5d
+			y: 2.5d
+			id: "0000000000000177"
+			tasks: [{
+				id: "0000000000000178"
+				type: "custom"
+				title: "{all_in_one_quests.underground.90fa1c5f4df88fd4cba8}"
+				icon: "silentgems:sodalite_ore"
+			}]
+			rewards: [{
+				id: "0000000000000179"
+				type: "item"
+				item: "silentgems:sodalite_ore"
+			}]
+		}
+		{
+			x: 6.5d
+			y: 0.5d
+			id: "000000000000017A"
+			tasks: [{
+				id: "000000000000017B"
+				type: "custom"
+				title: "{all_in_one_quests.underground.31166dfe461e3b168178}"
+				icon: "silentgems:spinel_ore"
+			}]
+			rewards: [{
+				id: "000000000000017C"
+				type: "item"
+				item: "silentgems:spinel_ore"
+			}]
+		}
+		{
+			x: -7.5d
+			y: 2.5d
+			id: "000000000000017D"
+			tasks: [{
+				id: "000000000000017E"
+				type: "custom"
+				title: "{all_in_one_quests.underground.11aeaf2d63eaf7606bac}"
+				icon: "silentgems:sunstone_ore"
+			}]
+			rewards: [{
+				id: "000000000000017F"
+				type: "item"
+				item: "silentgems:sunstone_ore"
+			}]
+		}
+		{
+			x: 0.5d
+			y: 4.0d
+			id: "0000000000000180"
+			tasks: [{
+				id: "0000000000000181"
+				type: "custom"
+				title: "{all_in_one_quests.underground.1385e004c9d2a11ccd8b}"
+				icon: "silentgems:tanzanite_ore"
+			}]
+			rewards: [{
+				id: "0000000000000182"
+				type: "item"
+				item: "silentgems:tanzanite_ore"
+			}]
+		}
+		{
+			x: -10.5d
+			y: 2.5d
+			id: "0000000000000183"
+			tasks: [{
+				id: "0000000000000184"
+				type: "custom"
+				title: "{all_in_one_quests.underground.d77082eaae0d56018233}"
+				icon: "silentgems:tektite_ore"
+			}]
+			rewards: [{
+				id: "0000000000000185"
+				type: "item"
+				item: "silentgems:tektite_ore"
+			}]
+		}
+		{
+			x: -0.5d
+			y: 4.0d
+			id: "0000000000000186"
+			tasks: [{
+				id: "0000000000000187"
+				type: "custom"
+				title: "{all_in_one_quests.underground.cdb9c2107f24f4341aed}"
+				icon: "silentgems:topaz_ore"
+			}]
+			rewards: [{
+				id: "0000000000000188"
+				type: "item"
+				item: "silentgems:topaz_ore"
+			}]
+		}
+		{
+			x: 7.5d
+			y: 3.0d
+			id: "0000000000000189"
+			tasks: [{
+				id: "000000000000018A"
+				type: "custom"
+				title: "{all_in_one_quests.underground.327f350454271c7d75d4}"
+				icon: "silentgems:turquoise_ore"
+			}]
+			rewards: [{
+				id: "000000000000018B"
+				type: "item"
+				item: "silentgems:turquoise_ore"
+			}]
+		}
+		{
+			x: -7.5d
+			y: 0.5d
+			id: "000000000000018C"
+			tasks: [{
+				id: "000000000000018D"
+				type: "custom"
+				title: "{all_in_one_quests.underground.f802d7929aee697089b2}"
+				icon: "silentgems:yellow_diamond_ore"
+			}]
+			rewards: [{
+				id: "000000000000018E"
+				type: "item"
+				item: "silentgems:yellow_diamond_ore"
+			}]
+		}
+		{
+			x: 6.5d
+			y: 2.5d
+			id: "000000000000018F"
+			tasks: [{
+				id: "0000000000000190"
+				type: "custom"
+				title: "{all_in_one_quests.underground.bf43c8216a85a710b916}"
+				icon: "silentgems:zircon_ore"
+			}]
+			rewards: [{
+				id: "0000000000000191"
+				type: "item"
+				item: "silentgems:zircon_ore"
+			}]
+		}
+		{
+			x: -0.5d
+			y: -4.0d
+			id: "0000000000000192"
+			tasks: [{
+				id: "0000000000000193"
+				type: "checkmark"
+				title: "{all_in_one_quests.underground.833e5c59ef54c2b8294f}"
+				icon: "minecraft:grass_block"
+			}]
+		}
+		{
+			x: -8.5d
+			y: -4.0d
+			id: "0000000000000194"
+			tasks: [{
+				id: "0000000000000195"
+				type: "checkmark"
+				title: "{all_in_one_quests.underground.efd40e772c18fa7e8475}"
+				icon: "minecraft:end_portal_frame"
+			}]
+		}
+		{
+			x: 7.5d
+			y: -4.0d
+			id: "0000000000000196"
+			tasks: [{
+				id: "0000000000000197"
+				type: "checkmark"
+				title: "{all_in_one_quests.underground.80040fe3b59d29d1a042}"
+				icon: "minecraft:netherrack"
+			}]
+		}
+		{
+			x: -0.5d
+			y: 7.0d
+			description: ["{all_in_one_quests.underground.9a5fe967e1b36ac28e73}"]
+			hide_dependency_lines: true
+			dependencies: [
+				"0000000000000174"
+				"0000000000000171"
+				"000000000000016E"
+				"00000000000000EA"
+				"00000000000000F0"
+				"000000000000009C"
+				"0000000000000114"
+				"0000000000000129"
+				"00000000000000B1"
+				"00000000000000F9"
+				"00000000000000C0"
+				"00000000000000F6"
+				"00000000000000BD"
+				"00000000000000C6"
+				"00000000000000BA"
+				"00000000000000CC"
+				"00000000000000A8"
+				"0000000000000105"
+				"00000000000000A5"
+				"00000000000000C9"
+				"000000000000012F"
+				"000000000000012C"
+				"00000000000000DB"
+				"00000000000000DE"
+				"00000000000000D8"
+				"00000000000000CF"
+				"00000000000000C3"
+				"0000000000000162"
+				"000000000000015C"
+				"0000000000000159"
+				"0000000000000150"
+				"000000000000014D"
+				"0000000000000165"
+				"0000000000000186"
+				"0000000000000180"
+				"000000000000011A"
+				"0000000000000147"
+				"00000000000000ED"
+				"0000000000000144"
+				"0000000000000138"
+				"00000000000000AE"
+				"0000000000000141"
+				"00000000000000D2"
+				"000000000000010B"
+				"000000000000014A"
+				"00000000000000E1"
+				"0000000000000132"
+				"0000000000000123"
+				"00000000000000F3"
+				"000000000000018F"
+				"0000000000000108"
+				"000000000000017A"
+				"000000000000010E"
+				"00000000000000D5"
+				"00000000000000FC"
+				"0000000000000153"
+				"0000000000000189"
+				"0000000000000135"
+				"0000000000000111"
+				"0000000000000102"
+				"0000000000000126"
+				"0000000000000183"
+				"00000000000000FF"
+				"00000000000000E4"
+				"00000000000000AB"
+				"00000000000000E7"
+				"000000000000009F"
+				"0000000000000120"
+				"0000000000000117"
+				"000000000000011D"
+				"0000000000000177"
+				"000000000000017D"
+				"000000000000013B"
+				"000000000000018C"
+				"000000000000016B"
+				"0000000000000156"
+				"000000000000013E"
+				"000000000000015F"
+				"0000000000000168"
+			]
+			hide: false
+			id: "0000000000000198"
+			tasks: [{
+				id: "0000000000000199"
+				type: "checkmark"
+				title: "{all_in_one_quests.underground.418258708911c0eab1e3}"
+				icon: {
+					id: "botania:terra_pick"
+					Count: 1b
+					tag: {
+						tipped: 1b
+						mana: 999999
+						Damage: 0
+					}
+				}
+			}]
+			rewards: [{
+				id: "000000000000019A"
+				type: "item"
+				item: {
+					id: "botania:terra_pick"
+					Count: 1b
+					tag: {
+						mana: 999999
+						Damage: 0
+					}
+				}
+			}]
+		}
+	]
+}

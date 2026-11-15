@@ -1,0 +1,49 @@
+{
+	id: "0000000000000002"
+	group: ""
+	order_index: 0
+	filename: "getting_started"
+	title: "{all_in_one_quests.getting_started.831d0f72d242b7d12d4e}"
+	icon: "oneblock:obmaker"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 0.0d
+			y: -0.5d
+			description: [
+				"{all_in_one_quests.getting_started.9c4422c410b672b1dd57}"
+				""
+				"{all_in_one_quests.getting_started.ef705ee7179a0f5caf64}"
+			]
+			id: "0000000000000005"
+			tasks: [{
+				id: "0000000000000006"
+				type: "checkmark"
+				title: "{all_in_one_quests.getting_started.73c3ded46aaf579142f5}"
+				icon: "oneblock:obmaker"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 1.0d
+			description: [
+				"{all_in_one_quests.getting_started.ed942ace822487454887}"
+				"{all_in_one_quests.getting_started.685169fcecbb156c5fe4}"
+			]
+			id: "332EB87858AADD18"
+			tasks: [{
+				id: "134991CA449E877C"
+				type: "checkmark"
+				title: "{all_in_one_quests.getting_started.91ae705ef3583a176751}"
+				icon: {
+					id: "timeisup:timer_anchor"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+		}
+	]
+}

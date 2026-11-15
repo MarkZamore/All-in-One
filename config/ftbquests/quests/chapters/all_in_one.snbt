@@ -1,0 +1,382 @@
+{
+	id: "000000000000036B"
+	group: ""
+	order_index: 15
+	filename: "all_in_one"
+	title: "{all_in_one_quests.all_in_one.b057939d07e172a2b366}"
+	icon: "refinedstorage:creative_storage_block"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "{all_in_one_quests.all_in_one.b057939d07e172a2b366}"
+			icon: "refinedstorage:creative_storage_block"
+			x: 0.0d
+			y: 0.0d
+			dependencies: [
+				"0000000000000002"
+				"0000000000000007"
+				"0000000000000040"
+				"000000000000019B"
+				"00000000000001C6"
+				"0000000000000098"
+				"00000000000001ED"
+				"00000000000001CD"
+				"0000000000000247"
+				"000000000000021C"
+				"00000000000002E7"
+				"0000000000000351"
+				"0000000000000268"
+				"0000000000003AEE"
+			]
+			hide: true
+			id: "000000000000036C"
+			tasks: [{
+				id: "000000000000036D"
+				type: "checkmark"
+				title: "{all_in_one_quests.all_in_one.b057939d07e172a2b366}"
+			}]
+			rewards: [
+				{
+					id: "000000000000036E"
+					type: "item"
+					item: "refinedstorage:creative_storage_block"
+				}
+				{
+					id: "000000000000036F"
+					type: "item"
+					item: "refinedstorage:creative_fluid_storage_block"
+				}
+				{
+					id: "0000000000000370"
+					type: "item"
+					item: "ars_nouveau:creative_spell_book"
+				}
+				{
+					id: "0000000000000371"
+					type: "xp_levels"
+					xp_levels: 1000
+				}
+			]
+		}
+		{
+			x: 0.0d
+			y: 1.5d
+			subtitle: "{all_in_one_quests.all_in_one.503b8443c86f1c658673}"
+			description: [
+				"{all_in_one_quests.all_in_one.503b8443c86f1c658673}"
+				"{all_in_one_quests.all_in_one.87589fa79410e0d3ec4a}"
+				"{all_in_one_quests.all_in_one.b3d349ec1314ab770c93}"
+			]
+			dependencies: ["000000000000036C"]
+			hide: true
+			id: "0000000000000372"
+			tasks: [{
+				id: "0000000000000373"
+				type: "checkmark"
+				title: "{all_in_one_quests.all_in_one.d1c702940832313ee35e}"
+				icon: "minecraft:totem_of_undying"
+			}]
+		}
+		{
+			icon: "botania:enchanted_soil"
+			tags: [
+				"boost"
+				"unlock_farmland"
+			]
+			x: -3.5d
+			y: -2.0d
+			description: [
+				"{all_in_one_quests.all_in_one.a8f9d56876bc1a54dcc9}"
+				"{all_in_one_quests.all_in_one.1c416992891be58daaec}"
+			]
+			dependencies: [
+				"0000000000000349"
+				"0000000000000040"
+			]
+			hide: true
+			optional: true
+			id: "7B5C6A5C2751293F"
+			tasks: [{
+				id: "5586F7A47820FFC5"
+				type: "checkmark"
+				title: "{all_in_one_quests.all_in_one.4830251f549110dda720}"
+				disable_toast: true
+			}]
+		}
+		{
+			icon: "minecraft:dirt"
+			tags: [
+				"boost"
+				"unlock_flatland"
+			]
+			x: -4.5d
+			y: -2.0d
+			description: [
+				"{all_in_one_quests.all_in_one.8a9f674034ebe244cd0c}"
+				"{all_in_one_quests.all_in_one.90a855aac434fd18f9df}"
+			]
+			dependencies: [
+				"0000000000000349"
+				"0000000000000007"
+			]
+			hide: true
+			optional: true
+			id: "0584EF1E706C673D"
+			tasks: [{
+				id: "4CCE248D865DB339"
+				type: "checkmark"
+				title: "{all_in_one_quests.all_in_one.e5b866369f40822019f9}"
+				disable_toast: true
+			}]
+		}
+		{
+			icon: "minecraft:stone"
+			tags: [
+				"boost"
+				"unlock_underground"
+			]
+			x: -2.5d
+			y: -2.0d
+			description: [
+				"{all_in_one_quests.all_in_one.4c63dd5f2b2365aa0467}"
+				"{all_in_one_quests.all_in_one.dd99a18f5a9415473d70}"
+			]
+			dependencies: [
+				"0000000000000349"
+				"000000000000019B"
+			]
+			hide: true
+			optional: true
+			id: "09357A9C21BDACE9"
+			tasks: [{
+				id: "79D00BBB10BC1345"
+				type: "checkmark"
+				title: "{all_in_one_quests.all_in_one.9111fae944303391ba5f}"
+				disable_toast: true
+			}]
+		}
+		{
+			icon: "minecraft:grass_block"
+			tags: [
+				"boost"
+				"unlock_overworld"
+			]
+			x: -1.5d
+			y: -2.0d
+			description: [
+				"{all_in_one_quests.all_in_one.7cf970657e6b9e79000a}"
+				"{all_in_one_quests.all_in_one.c13c09d3901f5fdfe2f6}"
+			]
+			dependencies: [
+				"0000000000000349"
+				"00000000000001C6"
+			]
+			hide: true
+			optional: true
+			id: "2E1BA57CDE38F66B"
+			tasks: [{
+				id: "2B301C7F5BFF6852"
+				type: "checkmark"
+				title: "{all_in_one_quests.all_in_one.50a3bd98811efb8f1d3d}"
+				disable_toast: true
+			}]
+		}
+		{
+			icon: "astralsorcery:marble_engraved"
+			tags: [
+				"boost"
+				"unlock_astral"
+			]
+			x: -0.5d
+			y: -2.0d
+			description: [
+				"{all_in_one_quests.all_in_one.c5ea8555a866deee7108}"
+				"{all_in_one_quests.all_in_one.34975c57dedde738326d}"
+			]
+			dependencies: [
+				"0000000000000349"
+				"00000000000001CD"
+			]
+			hide: true
+			optional: true
+			id: "392FD61A399DFDB4"
+			tasks: [{
+				id: "6487312C20C2FF5F"
+				type: "checkmark"
+				title: "{all_in_one_quests.all_in_one.f44045399e1c8ea3ff5b}"
+				disable_toast: true
+			}]
+		}
+		{
+			icon: "ars_nouveau:mana_gem_block"
+			tags: [
+				"boost"
+				"unlock_magicka"
+			]
+			x: 0.5d
+			y: -2.0d
+			description: [
+				"{all_in_one_quests.all_in_one.0eff49336a0c2d7147ad}"
+				"{all_in_one_quests.all_in_one.afad6e17aafcddaf0cd9}"
+			]
+			dependencies: [
+				"0000000000000349"
+				"00000000000001ED"
+			]
+			hide: true
+			optional: true
+			id: "124C0F4C1EA38582"
+			tasks: [{
+				id: "080E93DA035F96C5"
+				type: "checkmark"
+				title: "{all_in_one_quests.all_in_one.57d2e62a09be8c19300c}"
+				disable_toast: true
+			}]
+		}
+		{
+			icon: "minecraft:sea_lantern"
+			tags: [
+				"boost"
+				"unlock_abyss"
+			]
+			x: 1.5d
+			y: -2.0d
+			description: [
+				"{all_in_one_quests.all_in_one.a43eced8ffe4e0732503}"
+				"{all_in_one_quests.all_in_one.acf856b76464dda4b860}"
+			]
+			dependencies: [
+				"0000000000000349"
+				"000000000000021C"
+			]
+			hide: true
+			optional: true
+			id: "1D837C1AEA34D923"
+			tasks: [{
+				id: "339FA9AF3FBEF7D9"
+				type: "checkmark"
+				title: "{all_in_one_quests.all_in_one.689e57f6630cd1ca9aa5}"
+				disable_toast: true
+			}]
+		}
+		{
+			icon: "minecraft:bee_nest"
+			tags: [
+				"boost"
+				"unlock_bumblezone"
+			]
+			x: 2.5d
+			y: -2.0d
+			description: [
+				"{all_in_one_quests.all_in_one.1a63552ebb53d317b9df}"
+				"{all_in_one_quests.all_in_one.a6da1088b37551b9ee61}"
+			]
+			dependencies: [
+				"0000000000000349"
+				"0000000000000247"
+			]
+			hide: true
+			optional: true
+			id: "2680E5CCD92EB165"
+			tasks: [{
+				id: "15778B1FB5D45B81"
+				type: "checkmark"
+				title: "{all_in_one_quests.all_in_one.9d63dc0257297498b1f9}"
+				disable_toast: true
+			}]
+		}
+		{
+			icon: "minecraft:netherrack"
+			tags: [
+				"boost"
+				"unlock_nether"
+			]
+			x: 3.5d
+			y: -2.0d
+			description: [
+				"{all_in_one_quests.all_in_one.126abaea97d04259b5c9}"
+				"{all_in_one_quests.all_in_one.1c5a1750480c76b89dd6}"
+			]
+			dependencies: [
+				"0000000000000349"
+				"00000000000002E7"
+			]
+			hide: true
+			optional: true
+			id: "575FDF819A0F6ADE"
+			tasks: [{
+				id: "6449D1D1F51A1764"
+				type: "checkmark"
+				title: "{all_in_one_quests.all_in_one.23a704c51b82a9d79eb6}"
+				disable_toast: true
+			}]
+		}
+		{
+			icon: "minecraft:end_portal_frame"
+			tags: [
+				"boost"
+				"unlock_end"
+			]
+			x: 4.5d
+			y: -2.0d
+			description: [
+				"{all_in_one_quests.all_in_one.c15dcfcf1526dfff389f}"
+				"{all_in_one_quests.all_in_one.b122fae851919efbc22d}"
+			]
+			dependencies: [
+				"0000000000000349"
+				"0000000000000351"
+			]
+			hide: true
+			optional: true
+			id: "591F94670C19B76E"
+			tasks: [{
+				id: "4091DAEC5627174E"
+				type: "checkmark"
+				title: "{all_in_one_quests.all_in_one.678b1389d3cdf368cbd8}"
+				disable_toast: true
+			}]
+		}
+		{
+			icon: "minecraft:glass"
+			tags: [
+				"boost"
+				""
+			]
+			x: 0.0d
+			y: -3.0d
+			description: [
+				"{all_in_one_quests.all_in_one.a99ae68c6aa23b45d642}"
+				"{all_in_one_quests.all_in_one.93afbefb192072e54df2}"
+				"{all_in_one_quests.all_in_one.4e0900122f4b436cecf3}"
+			]
+			dependencies: ["0000000000000349"]
+			hide: true
+			optional: true
+			id: "45986D09D2C6FB4C"
+			tasks: [{
+				id: "6D3F2533297B7832"
+				type: "checkmark"
+				title: "{all_in_one_quests.all_in_one.2258357aa643188e07ef}"
+			}]
+		}
+		{
+			title: "{all_in_one_quests.all_in_one.633e1daeaf95f9478032}"
+			icon: {
+				id: "oneblock:statue"
+				Count: 1b
+				tag: {
+					Owner: { }
+				}
+			}
+			x: 0.0d
+			y: -4.0d
+			description: ["{all_in_one_quests.all_in_one.cd180eab4f36f8df0783}"]
+			dependencies: ["0000000000000349"]
+			hide: true
+			optional: true
+			id: "4CE066BC1328B83C"
+		}
+	]
+}

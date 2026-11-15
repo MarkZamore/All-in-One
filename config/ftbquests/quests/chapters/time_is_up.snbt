@@ -1,0 +1,198 @@
+{
+	id: "0000000000003AEE"
+	group: ""
+	order_index: 16
+	filename: "time_is_up"
+	title: "{all_in_one_quests.time_is_up.030665081c6b7fbcd189}"
+	icon: "minecraft:clock"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 0.0d
+			y: 0.0d
+			description: [
+				"{all_in_one_quests.time_is_up.913eb1855bd6c6513699}"
+				"{all_in_one_quests.time_is_up.c769cdba2c031f1b7a24}"
+			]
+			min_required_dependencies: 1
+			dependencies: [
+				"0000000000000347"
+				"0000000000000349"
+				"0000000000000248"
+			]
+			hide: true
+			id: "0000000000003AEF"
+			tasks: [{
+				id: "0000000000003AF0"
+				type: "checkmark"
+				title: "{all_in_one_quests.time_is_up.030665081c6b7fbcd189}"
+				icon: "minecraft:clock"
+			}]
+		}
+		{
+			icon: "silentgems:teleporter_anchor"
+			x: -2.0d
+			y: 1.5d
+			description: [
+				"{all_in_one_quests.time_is_up.c42f91805e03da36b069}"
+				"{all_in_one_quests.time_is_up.21384c22ed05bf4fdbb1}"
+				"{all_in_one_quests.time_is_up.89fa8d24c69504c2a5e9}"
+			]
+			dependencies: ["0000000000003AEF"]
+			hide: true
+			id: "0000000000003AF1"
+			tasks: [
+				{
+					id: "0000000000003AF2"
+					type: "item"
+					item: "silentgems:teleporter_anchor"
+					count: 4L
+				}
+				{
+					id: "0000000000003AF3"
+					type: "item"
+					item: {
+						id: "silentgems:teleporter_linker"
+						Count: 1b
+						tag: { }
+					}
+				}
+			]
+		}
+		{
+			x: -2.0d
+			y: 3.5d
+			description: [
+				"{all_in_one_quests.time_is_up.56bb9ecd3d0165f19211}"
+				"{all_in_one_quests.time_is_up.cbc62d98258bfed77884}"
+			]
+			dependencies: ["0000000000003AF1"]
+			id: "0000000000003AF4"
+			tasks: [{
+				id: "0000000000003AF5"
+				type: "item"
+				item: "silentgems:ruby_teleporter"
+				count: 2L
+			}]
+			rewards: [{
+				id: "0000000000003AF6"
+				type: "item"
+				item: {
+					id: "silentgems:ruby_return_home_charm"
+					Count: 1b
+					tag: { }
+				}
+			}]
+		}
+		{
+			icon: "portality:controller"
+			x: 2.0d
+			y: 1.5d
+			description: [
+				"{all_in_one_quests.time_is_up.bf816558072b902d709b}"
+				"{all_in_one_quests.time_is_up.76ff956ad63c97e9ad9a}"
+			]
+			dependencies: ["0000000000003AEF"]
+			hide: true
+			id: "0000000000003AF7"
+			tasks: [
+				{
+					id: "0000000000003AF8"
+					type: "item"
+					item: "portality:controller"
+				}
+				{
+					id: "0000000000003AF9"
+					type: "item"
+					item: "portality:frame"
+					count: 46L
+				}
+				{
+					id: "0000000000003AFA"
+					type: "item"
+					item: "portality:module_energy"
+				}
+			]
+			rewards: [{
+				id: "0000000000003AFB"
+				type: "item"
+				item: "portality:frame"
+				count: 30
+			}]
+		}
+		{
+			x: 2.0d
+			y: -1.5d
+			dependencies: ["0000000000003AEF"]
+			hide: true
+			id: "19AA007B1940F811"
+			tasks: [{
+				id: "6090C084D5137D02"
+				type: "item"
+				item: "timeisup:timer_bonus"
+			}]
+			rewards: [{
+				id: "679120FDD7EB3DFA"
+				type: "item"
+				item: "timeisup:timer_bonus"
+			}]
+		}
+		{
+			x: 2.0d
+			y: -3.5d
+			description: ["{all_in_one_quests.time_is_up.5621d69d0ab93b7b49b3}"]
+			dependencies: ["19AA007B1940F811"]
+			id: "2E2A7BA7F1091A15"
+			tasks: [{
+				id: "2319D09190F6BDA8"
+				type: "item"
+				item: {
+					id: "timeisup:timer_anchor"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+			rewards: [{
+				id: "5C75EE9C2B575DB7"
+				type: "item"
+				item: "minecraft:ender_pearl"
+				count: 2
+			}]
+		}
+		{
+			icon: {
+				id: "timeisup:timer_ward"
+				Count: 1b
+				tag: { }
+			}
+			x: 0.0d
+			y: -3.5d
+			description: [
+				"{all_in_one_quests.time_is_up.73cecdbeb2b70ea7141b}"
+				"{all_in_one_quests.time_is_up.7d8cfa080fd2f505c84a}"
+			]
+			dependencies: ["2E2A7BA7F1091A15"]
+			id: "466A63C7BDDD6DBD"
+			tasks: [
+				{
+					id: "49650F0B576DFDE1"
+					type: "item"
+					item: "timeisup:timer_ward"
+				}
+				{
+					id: "787A93CB94F76DC8"
+					type: "item"
+					item: "timeisup:timer_ward_head"
+				}
+			]
+			rewards: [{
+				id: "7638CF49A5772861"
+				type: "item"
+				item: "timeisup:timer_ward"
+			}]
+		}
+	]
+}

@@ -1,0 +1,419 @@
+{
+	id: "79F742F7C7BA6374"
+	group: ""
+	order_index: 14
+	filename: "ex_nihilo"
+	title: "{all_in_one_quests.ex_nihilo.0410f0fca9891924cea1}"
+	icon: "oneblock:ex_nihilo"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "{all_in_one_quests.ex_nihilo.68a291288e72bb148b3c}"
+			x: -2.0d
+			y: 0.0d
+			dependencies: ["4484C7F9072DB408"]
+			hide: true
+			id: "2A95CEF63B25A027"
+			tasks: [
+				{
+					id: "2D815B359FB4F143"
+					type: "item"
+					title: "{all_in_one_quests.ex_nihilo.fced02621af57aff9659}"
+					icon: {
+						id: "oneblock:nihilo_catalyst"
+						Count: 1b
+						tag: {
+							oblevel: 0
+						}
+					}
+					item: {
+						id: "itemfilters:and"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "oneblock:nihilo_catalyst"
+									Count: 1b
+								}
+								{
+									id: "itemfilters:weak_nbt"
+									Count: 1b
+									tag: {
+										value: {
+											oblevel: 0
+										}
+									}
+								}
+							]
+						}
+					}
+				}
+				{
+					id: "3F1B422019FF2A94"
+					type: "item"
+					title: "{all_in_one_quests.ex_nihilo.48a3f747e1c46ddc722f}"
+					icon: {
+						id: "oneblock:nihilo_catalyst"
+						Count: 1b
+						tag: {
+							oblevel: 200
+						}
+					}
+					item: {
+						id: "itemfilters:and"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "oneblock:nihilo_catalyst"
+									Count: 1b
+								}
+								{
+									id: "itemfilters:weak_nbt"
+									Count: 1b
+									tag: {
+										value: {
+											oblevel: 200
+										}
+									}
+								}
+							]
+						}
+					}
+				}
+				{
+					id: "1F51FA4C7D831F44"
+					type: "item"
+					title: "{all_in_one_quests.ex_nihilo.da702540c530154fd562}"
+					icon: {
+						id: "oneblock:nihilo_catalyst"
+						Count: 1b
+						tag: {
+							oblevel: 300
+						}
+					}
+					item: {
+						id: "itemfilters:and"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "oneblock:nihilo_catalyst"
+									Count: 1b
+								}
+								{
+									id: "itemfilters:weak_nbt"
+									Count: 1b
+									tag: {
+										value: {
+											oblevel: 300
+										}
+									}
+								}
+							]
+						}
+					}
+				}
+				{
+					id: "28459AA544A890B5"
+					type: "item"
+					title: "{all_in_one_quests.ex_nihilo.86522fbe56e517803cd3}"
+					icon: {
+						id: "oneblock:nihilo_catalyst"
+						Count: 1b
+						tag: {
+							oblevel: 800
+						}
+					}
+					item: {
+						id: "itemfilters:and"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "oneblock:nihilo_catalyst"
+									Count: 1b
+								}
+								{
+									id: "itemfilters:weak_nbt"
+									Count: 1b
+									tag: {
+										value: {
+											oblevel: 900
+										}
+									}
+								}
+							]
+						}
+					}
+				}
+			]
+			rewards: [{
+				id: "546B11C53631D327"
+				type: "item"
+				item: "oneblock:ex_nihilo"
+			}]
+		}
+		{
+			title: "{all_in_one_quests.ex_nihilo.f4a755840257671f5067}"
+			x: 0.0d
+			y: 0.0d
+			dependencies: ["4484C7F9072DB408"]
+			hide: true
+			id: "55B46521F06E4FD3"
+			tasks: [
+				{
+					id: "27A569E993E4749E"
+					type: "item"
+					title: "{all_in_one_quests.ex_nihilo.89b262c9170be3aca80c}"
+					icon: {
+						id: "oneblock:nihilo_catalyst"
+						Count: 1b
+						tag: {
+							oblevel: 1800
+						}
+					}
+					item: {
+						id: "itemfilters:and"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "oneblock:nihilo_catalyst"
+									Count: 1b
+								}
+								{
+									id: "itemfilters:weak_nbt"
+									Count: 1b
+									tag: {
+										value: {
+											oblevel: 1800
+										}
+									}
+								}
+							]
+						}
+					}
+				}
+				{
+					id: "7A573667CE3A5A7B"
+					type: "item"
+					title: "{all_in_one_quests.ex_nihilo.41248824ed9bd4f41652}"
+					icon: {
+						id: "oneblock:nihilo_catalyst"
+						Count: 1b
+						tag: {
+							oblevel: 2000
+						}
+					}
+					item: {
+						id: "itemfilters:and"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "oneblock:nihilo_catalyst"
+									Count: 1b
+								}
+								{
+									id: "itemfilters:weak_nbt"
+									Count: 1b
+									tag: {
+										value: {
+											oblevel: 2000
+										}
+									}
+								}
+							]
+						}
+					}
+				}
+				{
+					id: "4C4B3FE53653FD60"
+					type: "item"
+					title: "{all_in_one_quests.ex_nihilo.f026bd884f31c7add811}"
+					icon: {
+						id: "oneblock:nihilo_catalyst"
+						Count: 1b
+						tag: {
+							oblevel: 2200
+						}
+					}
+					item: {
+						id: "itemfilters:and"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "oneblock:nihilo_catalyst"
+									Count: 1b
+								}
+								{
+									id: "itemfilters:weak_nbt"
+									Count: 1b
+									tag: {
+										value: {
+											oblevel: 2200
+										}
+									}
+								}
+							]
+						}
+					}
+				}
+			]
+			rewards: [{
+				id: "4E724E452551700A"
+				type: "item"
+				item: "oneblock:ex_nihilo"
+			}]
+		}
+		{
+			x: 2.0d
+			y: 0.0d
+			dependencies: ["4484C7F9072DB408"]
+			hide: true
+			id: "0984E71452F059AA"
+			tasks: [
+				{
+					id: "7271720B36C52288"
+					type: "item"
+					title: "{all_in_one_quests.ex_nihilo.ca4e6393a2685fe9afa4}"
+					icon: {
+						id: "oneblock:nihilo_catalyst"
+						Count: 1b
+						tag: {
+							oblevel: 3000
+						}
+					}
+					item: {
+						id: "itemfilters:and"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "oneblock:nihilo_catalyst"
+									Count: 1b
+								}
+								{
+									id: "itemfilters:weak_nbt"
+									Count: 1b
+									tag: {
+										value: {
+											oblevel: 3000
+										}
+									}
+								}
+							]
+						}
+					}
+				}
+				{
+					id: "019C60867511500F"
+					type: "item"
+					title: "{all_in_one_quests.ex_nihilo.8c021efd6de9d15a23bf}"
+					icon: {
+						id: "oneblock:nihilo_catalyst"
+						Count: 1b
+						tag: {
+							oblevel: 3800
+						}
+					}
+					item: {
+						id: "itemfilters:and"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "oneblock:nihilo_catalyst"
+									Count: 1b
+								}
+								{
+									id: "itemfilters:weak_nbt"
+									Count: 1b
+									tag: {
+										value: {
+											oblevel: 3800
+										}
+									}
+								}
+							]
+						}
+					}
+				}
+				{
+					id: "4605F71FA5BCC05E"
+					type: "item"
+					title: "{all_in_one_quests.ex_nihilo.13997e52fb62a983696e}"
+					icon: {
+						id: "oneblock:nihilo_catalyst"
+						Count: 1b
+						tag: {
+							oblevel: 4200
+						}
+					}
+					item: {
+						id: "itemfilters:and"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "oneblock:nihilo_catalyst"
+									Count: 1b
+								}
+								{
+									id: "itemfilters:weak_nbt"
+									Count: 1b
+									tag: {
+										value: {
+											oblevel: 4200
+										}
+									}
+								}
+							]
+						}
+					}
+				}
+				{
+					id: "30016E36124A9A02"
+					type: "item"
+					title: "{all_in_one_quests.ex_nihilo.5ae0e5a2dba63864ab17}"
+					icon: {
+						id: "oneblock:nihilo_catalyst"
+						Count: 1b
+						tag: {
+							oblevel: 5000
+						}
+					}
+					item: {
+						id: "itemfilters:and"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "oneblock:nihilo_catalyst"
+									Count: 1b
+								}
+								{
+									id: "itemfilters:weak_nbt"
+									Count: 1b
+									tag: {
+										value: {
+											oblevel: 5000
+										}
+									}
+								}
+							]
+						}
+					}
+				}
+			]
+			rewards: [{
+				id: "2543E90A8FD082AB"
+				type: "item"
+				item: "oneblock:ex_nihilo"
+			}]
+		}
+	]
+}
