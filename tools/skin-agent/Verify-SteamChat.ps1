@@ -18,8 +18,13 @@ $classes = Join-Path $run 'steam-chat-probe'
 if (Test-Path -LiteralPath $classes) { throw 'Use a fresh probe directory.' }
 [void][IO.Directory]::CreateDirectory($classes)
 try {
+    $common = Join-Path $project 'Program/IdentityAdapters/Common'
+    $identity = Join-Path $classes 'PortableIdentityProfiles.java'
+    $source = (Get-Content -LiteralPath (Join-Path $common 'PortableIdentityProfiles.java') -Raw).
+        Replace('Path.of(configuredPath)', 'java.nio.file.Paths.get(configuredPath)')
+    [IO.File]::WriteAllText($identity, $source, [Text.UTF8Encoding]::new($false))
     & (Join-Path $env:JAVA_HOME 'bin/javac.exe') --release 8 -encoding UTF-8 -cp $asm -d $classes `
-        "$PSScriptRoot/LegacyMultiplayerHooks.java" "$PSScriptRoot/LegacySkinAgent.java" `
+        "$identity" "$PSScriptRoot/LegacyMultiplayerHooks.java" "$PSScriptRoot/LegacySkinAgent.java" `
         "$PSScriptRoot/VerifySteamChat.java" "$PSScriptRoot/fixtures/SteamRuntime.java"
     if ($LASTEXITCODE) { throw 'Native chat site probe did not compile.' }
     & $Java8 -cp "$classes$([IO.Path]::PathSeparator)$asm" VerifySteamChat $ForgeClient

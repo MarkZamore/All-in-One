@@ -41,7 +41,7 @@ public final class LegacySkinAgent implements ClassFileTransformer {
             if ("me/hypherionmc/simplerpc/Utils".equals(name)) return useConnectedPlayerCount(bytes);
             if ("net/minecraft/client/gui/screen/MainMenuScreen".equals(name))
                 return enableSteamMultiplayerButton(bytes);
-            if (CLIENT.equals(name)) return enableSteamGuestChat(bytes);
+            if (CLIENT.equals(name)) return enableSteamChat(bytes);
         }
         if (!SESSION.equals(name)) return null;
         ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
@@ -86,14 +86,16 @@ public final class LegacySkinAgent implements ClassFileTransformer {
         return writer.toByteArray();
     }
 
-    private static byte[] enableSteamGuestChat(byte[] bytes) {
+    private static byte[] enableSteamChat(byte[] bytes) {
         ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
-        int[] edits = new int[1];
+        int[] edits = new int[2];
         new ClassReader(bytes).accept(new ClassVisitor(Opcodes.ASM9, writer) {
             @Override
             public MethodVisitor visitMethod(int access, String method, String descriptor, String signature, String[] exceptions) {
                 MethodVisitor target = super.visitMethod(access, method, descriptor, signature, exceptions);
-                if (!"func_238207_b_".equals(method) || !"(Ljava/lang/String;)V".equals(descriptor)) return target;
+                boolean opening = "func_238207_b_".equals(method) && "(Ljava/lang/String;)V".equals(descriptor);
+                boolean receiving = "func_238198_a_".equals(method) && "(Ljava/util/UUID;)Z".equals(descriptor);
+                if (!opening && !receiving) return target;
                 return new MethodVisitor(Opcodes.ASM9, target) {
                     @Override
                     public void visitMethodInsn(int opcode, String owner, String name, String desc, boolean isInterface) {
@@ -101,14 +103,21 @@ public final class LegacySkinAgent implements ClassFileTransformer {
                         if (opcode != Opcodes.INVOKEVIRTUAL || !CLIENT.equals(owner)
                                 || !"func_238217_s_".equals(name) || !"()Z".equals(desc)) return;
                         visitVarInsn(Opcodes.ALOAD, 0);
-                        super.visitMethodInsn(Opcodes.INVOKESTATIC, MULTIPLAYER, "allowSteamGuestChat",
-                            "(ZLjava/lang/Object;)Z", false);
-                        edits[0]++;
+                        if (opening) {
+                            super.visitMethodInsn(Opcodes.INVOKESTATIC, MULTIPLAYER, "allowSteamGuestChat",
+                                "(ZLjava/lang/Object;)Z", false);
+                            edits[0]++;
+                        } else {
+                            visitVarInsn(Opcodes.ALOAD, 1);
+                            super.visitMethodInsn(Opcodes.INVOKESTATIC, MULTIPLAYER, "allowSteamHostChat",
+                                "(ZLjava/lang/Object;Ljava/util/UUID;)Z", false);
+                            edits[1]++;
+                        }
                     }
                 };
             }
         }, 0);
-        return edits[0] == 1 ? writer.toByteArray() : null;
+        return edits[0] == 1 && edits[1] == 1 ? writer.toByteArray() : null;
     }
 
     // A Steam bridge supplies the established play connection and does not

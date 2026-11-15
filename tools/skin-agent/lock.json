@@ -3,8 +3,8 @@
   "baseManifestSha256": "94a2a01efc83f007224fa1aff994781bddc9d84fa45612cfbfc023cceca36370",
   "launcherSource": "d1ee5e3b14b0ddf3e5a811d1b74d0a7f12e775b2",
   "agent": {
-    "sizeBytes": 156051,
-    "sha256": "0f4723f2f156831b7a5be9a89e3da8201a41b8528c91ae6e0e6a7310bbb6eb41"
+    "sizeBytes": 156648,
+    "sha256": "3a6b409ab8bb5c67124a77ec853e1dd4dbd7221708c82852bf5034dd80f62c5c"
   },
   "nativeInputs": {
     "forgeClientSha256": "72b7e1c7524ec7d1dc62afaa60884ba3e57584d8cea2391ba277c899e295bf26",

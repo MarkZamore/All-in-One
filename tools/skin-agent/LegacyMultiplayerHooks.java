@@ -29,10 +29,7 @@ public final class LegacyMultiplayerHooks {
     public static boolean allowSteamGuestChat(boolean allowedByMinecraft, Object minecraft) {
         if (allowedByMinecraft) return true;
         try {
-            if (!Boolean.TRUE.equals(field(minecraft, "field_238176_af_"))) return false;
-            Object settings = field(minecraft, "field_71474_y");
-            Object visibility = field(settings, "field_74343_n");
-            if (!(visibility instanceof Enum<?>) || !"FULL".equals(((Enum<?>) visibility).name())) return false;
+            if (!usesFullChat(minecraft)) return false;
 
             Object handler = minecraft.getClass().getMethod("func_147114_u").invoke(minecraft);
             if (handler == null) return false;
@@ -42,16 +39,8 @@ public final class LegacyMultiplayerHooks {
             InetSocketAddress address = (InetSocketAddress) remote;
             if (address.getAddress() == null || !address.getAddress().isLoopbackAddress()) return false;
 
-            Class<?> runtimeType = Class.forName("link.e4steam.steam.SteamRuntime", false, minecraft.getClass().getClassLoader());
-            Object runtime = runtimeType.getMethod("get").invoke(null);
-            Object view = runtimeType.getMethod("safeSessionView").invoke(runtime);
-            if (!Boolean.TRUE.equals(declared(view, "active")) || !"GUEST".equals(declared(view, "roleCode"))
-                    || !"ACTIVE".equals(declared(view, "stateCode"))) return false;
-
-            Object session = minecraft.getClass().getMethod("func_110432_I").invoke(minecraft);
-            if (!isLauncherSession((String) declared(session, "func_148255_b"),
-                    (String) declared(session, "func_111285_a"), (String) declared(session, "func_148254_d"),
-                    (Long) field(runtime, "localSteamId"))) return false;
+            Object runtime = steamRuntime(minecraft);
+            if (activeView(runtime, "GUEST") == null || !usesLauncherSession(minecraft, runtime)) return false;
 
             // A direct server on loopback can be active while a Steam bridge is closing.
             // Match the current play socket to an open client bridge in this Steam session.
@@ -65,6 +54,52 @@ public final class LegacyMultiplayerHooks {
             return false;
         }
         return false;
+    }
+
+    /** Selects the normal FilterManager path only for an authenticated peer of this private host. */
+    public static boolean allowSteamHostChat(boolean allowedByMinecraft, Object minecraft, UUID sender) {
+        if (allowedByMinecraft) return true;
+        if (sender == null) return false;
+        try {
+            if (!usesFullChat(minecraft) || !Boolean.TRUE.equals(declared(minecraft, "func_71387_A"))) return false;
+            Object runtime = steamRuntime(minecraft);
+            Object view = activeView(runtime, "INTEGRATED_HOST");
+            if (view == null || !usesLauncherSession(minecraft, runtime)) return false;
+
+            UUID portableSender = PortableIdentityProfiles.remap(sender, null);
+            for (Object peer : (Collection<?>) declared(view, "peers")) {
+                UUID tunnelId = (UUID) declared(peer, "minecraftUuid");
+                if (tunnelId != null && portableSender.equals(PortableIdentityProfiles.remap(tunnelId, null))) return true;
+            }
+        } catch (ReflectiveOperationException | NoSuchAlgorithmException | RuntimeException | LinkageError unavailable) {
+            return false;
+        }
+        return false;
+    }
+
+    private static boolean usesFullChat(Object minecraft) throws ReflectiveOperationException {
+        if (!Boolean.TRUE.equals(field(minecraft, "field_238176_af_"))) return false;
+        Object visibility = field(field(minecraft, "field_71474_y"), "field_74343_n");
+        return visibility instanceof Enum<?> && "FULL".equals(((Enum<?>) visibility).name());
+    }
+
+    private static Object steamRuntime(Object minecraft) throws ReflectiveOperationException {
+        Class<?> runtime = Class.forName("link.e4steam.steam.SteamRuntime", false, minecraft.getClass().getClassLoader());
+        return runtime.getMethod("get").invoke(null);
+    }
+
+    private static Object activeView(Object runtime, String role) throws ReflectiveOperationException {
+        Object view = declared(runtime, "safeSessionView");
+        return Boolean.TRUE.equals(declared(view, "active")) && role.equals(declared(view, "roleCode"))
+            && "ACTIVE".equals(declared(view, "stateCode")) ? view : null;
+    }
+
+    private static boolean usesLauncherSession(Object minecraft, Object runtime)
+            throws ReflectiveOperationException, NoSuchAlgorithmException {
+        Object session = declared(minecraft, "func_110432_I");
+        return isLauncherSession((String) declared(session, "func_148255_b"),
+            (String) declared(session, "func_111285_a"), (String) declared(session, "func_148254_d"),
+            (Long) field(runtime, "localSteamId"));
     }
 
     // LANMinecraft generates this local marker for its offline MSession. A Minecraft
