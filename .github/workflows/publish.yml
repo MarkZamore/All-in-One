@@ -1,0 +1,76 @@
+name: Publish All in One controls
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish.yml
+      - launcher/controls-preset.txt
+      - tools/keybinds/**
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pack-latest
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify the preset
+        run: python -B tools/keybinds/check_preset.py
+      - name: Stage and publish
+        shell: bash
+        run: |
+          set -euo pipefail
+          manifest_digest() {
+            gh api "repos/$GH_REPO/releases/tags/pack-latest" --jq '.assets[] | select(.name == "pack-manifest.json") | .digest'
+          }
+          test "$(gh api "repos/$GH_REPO/git/ref/heads/main" --jq .object.sha)" = "$GITHUB_SHA"
+          base=$(manifest_digest)
+          [[ "$base" =~ ^sha256:[0-9a-f]{64}$ ]]
+          candidate="$RUNNER_TEMP/controls"
+          python -B tools/keybinds/stage_release.py "$candidate" "${base#sha256:}"
+          for file in "$candidate"/*.zip; do
+            name=${file##*/}
+            digest=$(gh api "repos/$GH_REPO/releases/tags/pack-latest" | jq -r --arg name "$name" '.assets[] | select(.name == $name) | .digest')
+            expected="sha256:$(sha256sum "$file" | cut -d ' ' -f 1)"
+            if [[ -z "$digest" ]]; then
+              gh release upload pack-latest "$file"
+            else
+              test "$digest" = "$expected"
+            fi
+            curl --retry 3 --fail --silent --show-error --location "https://github.com/$GH_REPO/releases/download/pack-latest/$name?sha=$GITHUB_SHA" -o "$RUNNER_TEMP/public.zip"
+            cmp "$file" "$RUNNER_TEMP/public.zip"
+          done
+          test "$(manifest_digest)" = "$base"
+          mkdir "$RUNNER_TEMP/controls-previous"
+          cp "$candidate/previous-manifest.json" "$RUNNER_TEMP/controls-previous/pack-manifest.json"
+          if ! gh release upload pack-latest "$candidate/pack-manifest.json" --clobber; then
+            if [[ -z "$(manifest_digest)" ]]; then
+              gh release upload pack-latest "$RUNNER_TEMP/controls-previous/pack-manifest.json"
+            fi
+            exit 1
+          fi
+          for attempt in 1 2 3 4 5; do
+            if curl --fail --silent --show-error --location "https://github.com/$GH_REPO/releases/download/pack-latest/pack-manifest.json?sha=$GITHUB_SHA&try=$attempt" -o "$RUNNER_TEMP/public-manifest.json" &&
+               cmp -s "$candidate/pack-manifest.json" "$RUNNER_TEMP/public-manifest.json"; then
+              preset_sha=$(sha256sum launcher/controls-preset.txt | cut -d ' ' -f 1)
+              jq -e --arg sha "$preset_sha" --arg revision "$GITHUB_SHA" '
+                .revision == $revision and any(.files[]; .path == "launcher/controls-preset.txt" and .sha256 == $sha)
+              ' "$RUNNER_TEMP/public-manifest.json"
+              exit 0
+            fi
+            sleep 3
+          done
+          exit 1

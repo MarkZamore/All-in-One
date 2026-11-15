@@ -9,3 +9,4 @@
 *.json text eol=lf
 /config/ftbquests/quests/chapters/*.snbt -text
 /tools/questbook-localization/*.py text eol=lf
+/launcher/controls-preset.txt text eol=lf
