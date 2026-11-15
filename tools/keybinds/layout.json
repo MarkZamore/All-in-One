@@ -16,7 +16,7 @@
   "key.curios.open.desc": "key.keyboard.o",
   "key.botania_corporea_request": "key.keyboard.keypad.enter",
   "key.refinedstorage.focusSearchBar": "key.keyboard.keypad.divide",
-  "key.refinedstorage.clearGridCraftingMatrix": "key.keyboard.r:CONTROL",
+  "key.refinedstorage.clearGridCraftingMatrix": "key.keyboard.keypad.divide:CONTROL",
   "key.ftbquests.quests": "key.keyboard.f6",
   "key.mekanism.chest_mode": "key.keyboard.semicolon",
   "key.mekanism.head_mode": "key.keyboard.page.up",

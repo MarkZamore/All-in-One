@@ -64,7 +64,7 @@ key_key.astralsorcery.disable_perk_abilities:key.keyboard.keypad.3
 key_key.curios.open.desc:key.keyboard.o
 key_key.botania_corporea_request:key.keyboard.keypad.enter
 key_key.refinedstorage.focusSearchBar:key.keyboard.keypad.divide
-key_key.refinedstorage.clearGridCraftingMatrix:key.keyboard.r:CONTROL
+key_key.refinedstorage.clearGridCraftingMatrix:key.keyboard.keypad.divide:CONTROL
 key_key.refinedstorage.openWirelessGrid:key.keyboard.unknown
 key_key.refinedstorage.openWirelessFluidGrid:key.keyboard.unknown
 key_key.refinedstorage.openWirelessCraftingMonitor:key.keyboard.unknown

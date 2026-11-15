@@ -75,9 +75,13 @@ def layout():
     if {name for name in snapshot if name.strip() != name} != FANCYMENU_BUILT_IN or FANCYMENU_BUILT_IN & changes.keys():
         raise ValueError("Review which mod controls have names the launcher cannot parse")
     result = {name: value for name, value in (snapshot | changes).items() if name not in FANCYMENU_BUILT_IN}
+    fancy_bases = {snapshot[name] for name in FANCYMENU_BUILT_IN}
     for name, key in result.items():
         if not VALID.fullmatch(key) or key.partition(":")[0] in RESERVED:
             raise ValueError(f"Invalid or reserved key: {name} = {key}")
+        base, _, modifier = key.partition(":")
+        if base in fancy_bases and name != "key.saveToolbarActivator" and (modifier or context(name) != "GUI"):
+            raise ValueError(f"Could also activate under FancyMenu's Ctrl+Alt chord: {name}")
         if snapshot[name] != UNBOUND and key == UNBOUND:
             raise ValueError(f"Previously bound control disabled: {name}")
     return result
