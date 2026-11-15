@@ -17,9 +17,18 @@ if ((Get-FileHash -LiteralPath $asm).Hash -ine '876eab6a83daecad5ca67eb9fcabb063
 $classes = Join-Path $run 'steam-chat-probe'
 if (Test-Path -LiteralPath $classes) { throw 'Use a fresh probe directory.' }
 [void][IO.Directory]::CreateDirectory($classes)
-& (Join-Path $env:JAVA_HOME 'bin/javac.exe') --release 8 -encoding UTF-8 -cp $asm -d $classes `
-    "$PSScriptRoot/LegacyMultiplayerHooks.java" "$PSScriptRoot/LegacySkinAgent.java" `
-    "$PSScriptRoot/VerifySteamChat.java" "$PSScriptRoot/fixtures/SteamRuntime.java"
-if ($LASTEXITCODE) { throw 'Native chat site probe did not compile.' }
-& $Java8 -cp "$classes$([IO.Path]::PathSeparator)$asm" VerifySteamChat $ForgeClient
-if ($LASTEXITCODE) { throw 'Native chat site probe failed.' }
+try {
+    & (Join-Path $env:JAVA_HOME 'bin/javac.exe') --release 8 -encoding UTF-8 -cp $asm -d $classes `
+        "$PSScriptRoot/LegacyMultiplayerHooks.java" "$PSScriptRoot/LegacySkinAgent.java" `
+        "$PSScriptRoot/VerifySteamChat.java" "$PSScriptRoot/fixtures/SteamRuntime.java"
+    if ($LASTEXITCODE) { throw 'Native chat site probe did not compile.' }
+    & $Java8 -cp "$classes$([IO.Path]::PathSeparator)$asm" VerifySteamChat $ForgeClient
+    if ($LASTEXITCODE) { throw 'Native chat site probe failed.' }
+} finally {
+    $resolved = (Resolve-Path -LiteralPath $classes).Path
+    if ($resolved -ine $classes -or ((Get-Item -LiteralPath $resolved).Attributes -band [IO.FileAttributes]::ReparsePoint) -or
+        (Get-ChildItem -LiteralPath $resolved -Force -Recurse -Attributes ReparsePoint)) {
+        throw 'Unexpected path in the owned chat probe.'
+    }
+    Remove-Item -LiteralPath $resolved -Recurse -Force
+}
