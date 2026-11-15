@@ -26,9 +26,36 @@ $encoding = [Text.UTF8Encoding]::new($false)
 $skinSource = (Get-Content "$common/PortableSkinProfiles.java" -Raw).
     Replace('profile.getClass().isRecord()', 'false').
     Replace('value.isBlank()', 'value.trim().isEmpty()').
-    Replace('Path.of(configuredPath)', 'java.nio.file.Paths.get(configuredPath)')
+    Replace('Path.of(configuredPath)', 'java.nio.file.Paths.get(configuredPath)').
+    Replace("`r`n", "`n")
+$begin = $skinSource.IndexOf('    public static void apply(Object profile) {', [StringComparison]::Ordinal)
+$end = $skinSource.IndexOf('    /** Replaces only the texture property', [StringComparison]::Ordinal)
+if ($begin -lt 0 -or $end -le $begin) { throw 'The shared skin hook changed; review Java 8 compatibility.' }
+$apply = $skinSource.Substring($begin, $end - $begin)
+$lookup = '            SkinEntry entry = loadEntries().get(id);'
+$installed = '            invokeCompatible(properties, "put", "textures", property);'
+if (!$apply.Contains($lookup) -or !$apply.Contains($installed)) { throw 'The shared skin lookup changed; review Java 8 compatibility.' }
+$lookupWithTunnel = @'
+            Map<UUID, SkinEntry> current = loadEntries();
+            SkinEntry entry = current.get(id);
+            if (entry == null) {
+                // The game may give a Steam tunnel profile its tunnel UUID.
+                // Resolve only an authenticated registry alias for this skin lookup.
+                entry = current.get(PortableIdentityProfiles.remap(id, null));
+            }
+'@
+$tryApply = $apply.Replace('public static void apply(Object profile)', 'public static boolean tryApply(Object profile)').
+    Replace('return;', 'return false;').
+    Replace($lookup, $lookupWithTunnel.Replace("`r`n", "`n")).
+    Replace($installed, '            return Boolean.TRUE.equals(invokeCompatible(properties, "put", "textures", property));').
+    Replace('            // updates. Never mutate the shared PropertyMap.EMPTY.', "            // updates. Never mutate the shared PropertyMap.EMPTY.`n            return false;")
+$retainApply = "    public static void apply(Object profile) {`n        tryApply(profile);`n    }`n`n"
+$skinSource = $skinSource.Substring(0, $begin) + $retainApply + $tryApply + $skinSource.Substring($end)
 [IO.File]::WriteAllText("$work/PortableSkinProfiles.java", $skinSource, $encoding)
-& $javac --release 8 -encoding UTF-8 -d $hooks "$work/PortableSkinProfiles.java" "$common/PortableIdentityReflection.java" "$PSScriptRoot/LegacyMultiplayerHooks.java"
+$identitySource = (Get-Content "$common/PortableIdentityProfiles.java" -Raw).
+    Replace('Path.of(configuredPath)', 'java.nio.file.Paths.get(configuredPath)')
+[IO.File]::WriteAllText("$work/PortableIdentityProfiles.java", $identitySource, $encoding)
+& $javac --release 8 -encoding UTF-8 -d $hooks "$work/PortableSkinProfiles.java" "$work/PortableIdentityProfiles.java" "$common/PortableIdentityReflection.java" "$PSScriptRoot/LegacyMultiplayerHooks.java"
 if ($LASTEXITCODE) { throw 'Skin hook compilation failed.' }
 & $javac --release 8 -encoding UTF-8 -cp $asm -d $classes "$PSScriptRoot/LegacySkinAgent.java"
 if ($LASTEXITCODE) { throw 'Skin agent compilation failed.' }

@@ -54,10 +54,8 @@ public final class LegacySkinAgent implements ClassFileTransformer {
                             super.visitCode();
                             Label original = new Label();
                             visitVarInsn(Opcodes.ALOAD, 1);
-                            visitMethodInsn(Opcodes.INVOKESTATIC, SKINS, "isPortableSkin", "(Ljava/lang/Object;)Z", false);
+                            visitMethodInsn(Opcodes.INVOKESTATIC, SKINS, "tryApply", "(Ljava/lang/Object;)Z", false);
                             visitJumpInsn(Opcodes.IFEQ, original);
-                            visitVarInsn(Opcodes.ALOAD, 1);
-                            visitMethodInsn(Opcodes.INVOKESTATIC, SKINS, "apply", "(Ljava/lang/Object;)V", false);
                             visitInsn(Opcodes.ICONST_0);
                             visitVarInsn(Opcodes.ISTORE, 2);
                             visitLabel(original);
