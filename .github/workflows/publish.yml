@@ -1,4 +1,4 @@
-name: Publish All in One controls
+name: Publish All in One launcher files
 
 on:
   push:
@@ -6,6 +6,7 @@ on:
     paths:
       - .github/workflows/publish.yml
       - launcher/controls-preset.txt
+      - launcher/options-default.txt
       - tools/keybinds/**
   workflow_dispatch:
 
@@ -66,8 +67,11 @@ jobs:
             if curl --fail --silent --show-error --location "https://github.com/$GH_REPO/releases/download/pack-latest/pack-manifest.json?sha=$GITHUB_SHA&try=$attempt" -o "$RUNNER_TEMP/public-manifest.json" &&
                cmp -s "$candidate/pack-manifest.json" "$RUNNER_TEMP/public-manifest.json"; then
               preset_sha=$(sha256sum launcher/controls-preset.txt | cut -d ' ' -f 1)
-              jq -e --arg sha "$preset_sha" --arg revision "$GITHUB_SHA" '
-                .revision == $revision and any(.files[]; .path == "launcher/controls-preset.txt" and .sha256 == $sha)
+              options_sha=$(sha256sum launcher/options-default.txt | cut -d ' ' -f 1)
+              jq -e --arg preset "$preset_sha" --arg options "$options_sha" --arg revision "$GITHUB_SHA" '
+                .revision == $revision
+                and any(.files[]; .path == "launcher/controls-preset.txt" and .sha256 == $preset)
+                and any(.files[]; .path == "launcher/options-default.txt" and .sha256 == $options)
               ' "$RUNNER_TEMP/public-manifest.json"
               exit 0
             fi

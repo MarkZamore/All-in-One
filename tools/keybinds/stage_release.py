@@ -1,4 +1,4 @@
-"""Add the verified controls preset to the live All in One payload."""
+"""Stage the reviewed launcher files against the live All in One payload."""
 
 from datetime import datetime, timezone
 import hashlib
@@ -14,6 +14,7 @@ from check_preset import HERE, PRESET
 
 BASE = "https://github.com/MarkZamore/All-in-One/releases/download/pack-latest/"
 RELATIVE = "launcher/controls-preset.txt"
+OPTIONS = "launcher/options-default.txt"
 
 
 def pin(data):
@@ -59,19 +60,25 @@ def stage(output, base_sha):
     if mods != snapshot["modSha256"]:
         raise ValueError("Published mod bytes differ from the reviewed controls inventory")
 
-    preset = PRESET.read_bytes()
+    options = (source / OPTIONS).read_bytes()
+    if options != b"!skipMultiplayerWarning:true\n":
+        raise ValueError("Review changes to the pack's warning option before publishing")
+    updates = {RELATIVE: PRESET.read_bytes(), OPTIONS: options}
     assets = []
     for row in manifest["assets"]:
-        if RELATIVE in row["covers"]:
-            if row["covers"] != [RELATIVE] or row["kind"] != "zipRoot":
-                raise ValueError("Existing preset shares an archive; review before replacing it")
+        if updates.keys() & set(row["covers"]):
+            if len(row["covers"]) != 1 or row["kind"] != "zipRoot":
+                raise ValueError("A launcher file shares an archive; review before replacing it")
         else:
             assets.append(row)
     files = {row["path"]: row for row in manifest["files"]}
-    files[RELATIVE] = {"path": RELATIVE, **pin(preset)}
-    data = bundle({RELATIVE: preset})
-    preset_asset = f"r-{pin(data)['sha256'][:12]}-controls-preset.zip"
-    assets.append({"name": preset_asset, "kind": "zipRoot", "covers": [RELATIVE], **pin(data)})
+    new_assets = {}
+    for path, payload in updates.items():
+        files[path] = {"path": path, **pin(payload)}
+        data = bundle({path: payload})
+        name = f"r-{pin(data)['sha256'][:12]}-{Path(path).stem}.zip"
+        assets.append({"name": name, "kind": "zipRoot", "covers": [path], **pin(data)})
+        new_assets[name] = data
     if sorted(files) != sorted(path for asset in assets for path in asset["covers"]):
         raise ValueError("Candidate assets do not cover the full inventory exactly once")
 
@@ -95,7 +102,8 @@ def stage(output, base_sha):
         library={"name": library_name, "revision": revision, **pin(library)},
     )
     output.mkdir()
-    (output / preset_asset).write_bytes(data)
+    for name, data in new_assets.items():
+        (output / name).write_bytes(data)
     (output / library_name).write_bytes(library)
     (output / "previous-manifest.json").write_bytes(old)
     (output / "pack-manifest.json").write_bytes(encoded_json(manifest))

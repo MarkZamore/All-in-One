@@ -10,3 +10,4 @@
 /config/ftbquests/quests/chapters/*.snbt -text
 /tools/questbook-localization/*.py text eol=lf
 /launcher/controls-preset.txt text eol=lf
+/launcher/options-default.txt text eol=lf
