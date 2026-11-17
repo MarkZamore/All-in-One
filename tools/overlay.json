@@ -7,8 +7,8 @@
     },
     {
       "path": "launcher/jvm-args.txt",
-      "sha256": "6cd629a0a7a59ff89de2df00fb2ff70a24ae5e1bf61af8ae2543ddc0e7b03a18",
-      "sizeBytes": 85
+      "sha256": "554d3f1e535793101ec0a0e8e7899444f91d22d837bd3dd611518c8dcc74c971",
+      "sizeBytes": 152
     }
   ],
   "authorArchiveSha256": "1b7434aec426ec892e487a3d22c9468a5c53a24a3d7bd9bd203de12507135d78",
@@ -537,5 +537,12 @@
       ]
     }
   ],
-  "schemaVersion": 1
+  "schemaVersion": 1,
+  "supportFiles": [
+    {
+      "path": "config/lanminecraft/experimental-world-confirmation.jar",
+      "sizeBytes": 385299,
+      "sha256": "6db006392ebcfa6ce3cb5d21da8c8772eacfa388052e6e97bd5dd925734dd8bc"
+    }
+  ]
 }

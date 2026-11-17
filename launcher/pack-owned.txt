@@ -16,6 +16,7 @@ config/ftbquests/quests/chapters/time_is_up.snbt
 config/ftbquests/quests/chapters/underground.snbt
 config/ftbquests/quests/chapters/underground_2.snbt
 config/ftbquests/quests/reward_tables/67.snbt
+config/lanminecraft/experimental-world-confirmation.jar
 config/log4j2.xml
 kubejs/assets/all_in_one_quests/lang/en_us.json
 kubejs/assets/all_in_one_quests/lang/ru_ru.json
